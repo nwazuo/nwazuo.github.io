@@ -1,0 +1,276 @@
+/* Webpage layout excercise
+* Twostay - From a guy at dribbble, will look for him and give credits later
+* Code - Nwazuo Goodluck Chizaram
+* Github - github.com/nwazuo
+* Twitter - twitter.com/ch1zo
+*/
+/* Site colors */
+/* Font */
+/* Mixins for media queries */
+body {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  z-index: 1;
+  background: url("../img/hero-bg.png") no-repeat;
+  background-size: cover;
+}
+
+.hero:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero .header-contain {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.875rem 1.875rem 0 2rem;
+}
+
+@media (max-width: 900px) {
+  .hero header {
+    padding: 15px 15px;
+  }
+}
+
+.hero header .logo {
+  padding-top: 3px;
+}
+
+nav.large-menu {
+  position: relative;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+}
+
+nav.large-menu > ul {
+  padding-left: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav.large-menu > ul > li {
+  list-style-type: none;
+  padding: 15px 0 30px 0;
+  margin: 0 1.875rem;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 1124px) {
+  nav.large-menu > ul > li {
+    margin: 0 0.8rem;
+  }
+}
+
+nav.large-menu > ul > li:hover {
+  border-bottom: 2px solid #fff;
+}
+
+nav.large-menu > ul > li:hover > a {
+  color: white;
+}
+
+nav.large-menu > ul > li > a {
+  font-family: "CircularStd", "sans-serif";
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+nav.large-menu > ul .login {
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 15px 2.5rem;
+  margin-bottom: 12px;
+}
+
+nav.large-menu > ul .login a {
+  color: white;
+  line-height: 0;
+}
+
+nav.large-menu > ul .login:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.large-menu .drop {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.large-menu .drop > a {
+  background: url(../img/chevron-down.png) no-repeat 100%;
+  padding-right: 20px;
+}
+
+.large-menu .drop:hover {
+  border-bottom: 2px solid rgba(0, 0, 0, 0) !important;
+}
+
+.large-menu .dropdown {
+  position: absolute;
+  overflow: hidden;
+  padding-left: 0;
+  min-width: 200px;
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  will-change: opacity;
+}
+
+.large-menu .dropdown li {
+  padding-left: 0;
+  list-style-type: none;
+  padding: 20px 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.large-menu .dropdown li > a {
+  color: #26c195;
+  font-family: "CircularStd", "sans-serif";
+  text-decoration: none;
+}
+
+.large-menu .dropdown li > a:hover {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.dropdownBg {
+  position: absolute;
+  background: white;
+  -webkit-box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s, opacity 0.1s, -webkit-transform 0.2s;
+  transition: all 0.3s, opacity 0.1s, -webkit-transform 0.2s;
+  transition: all 0.3s, opacity 0.1s, transform 0.2s;
+  transition: all 0.3s, opacity 0.1s, transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+
+.dropdownBg .arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: white;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+
+.trigger-enter .dropdown {
+  display: block;
+}
+
+.trigger-open .dropdown {
+  opacity: 1;
+}
+
+.open {
+  opacity: 1;
+}
+
+nav.collapsed-menu,
+button.hamburger {
+  display: none;
+}
+
+/* Hide desktop menu at breakpoint and show mobile menu */
+@media (max-width: 900px) {
+  nav.large-menu {
+    display: none;
+  }
+  /* mobile navigation style  */
+  button.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    padding-left: 30px;
+  }
+  nav.collapsed-menu {
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: transparent;
+  }
+  nav.collapsed-menu ul {
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  nav.collapsed-menu ul .dropdown {
+    display: none;
+  }
+  nav.collapsed-menu ul > li {
+    display: block;
+  }
+}
+
+/* Hide */
+.hide {
+  display: none !important;
+}
+/*# sourceMappingURL=style.css.map */

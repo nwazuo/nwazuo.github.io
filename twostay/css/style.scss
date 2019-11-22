@@ -1,0 +1,277 @@
+/* Webpage layout excercise
+* Twostay - From a guy at dribbble, will look for him and give credits later
+* Code - Nwazuo Goodluck Chizaram
+* Github - github.com/nwazuo
+* Twitter - twitter.com/ch1zo
+*/
+
+/* Site colors */
+$accent: #00acff;
+$text: #1f2543;
+
+/* Font */
+$font: "CircularStd";
+
+/* Mixins for media queries */
+@mixin phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet-potrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin tablet-landscape-down {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin desktop-down {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+body {
+  // overflow-x: hidden;
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  z-index: 1;
+  background: url("../img/hero-bg.png") no-repeat;
+  background-size: cover;
+
+  &:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .header-contain {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1.875rem 1.875rem 0 2rem;
+
+    @include tablet-landscape-down {
+      padding: 15px 15px;
+    }
+
+    .logo {
+      padding-top: 3px;
+    }
+  }
+}
+
+nav.large-menu {
+  position: relative;
+  perspective: 600px;
+  & > ul {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > li {
+      list-style-type: none;
+      padding: 15px 0 30px 0;
+      margin: 0 1.875rem;
+      color: white;
+      box-sizing: border-box;
+      border-bottom: 2px solid rgba(0, 0, 0, 0);
+
+      @media screen and (max-width: 1124px) {
+        margin: 0 0.8rem;
+      }
+
+      &:hover {
+        border-bottom: 2px solid #fff;
+
+        & > a {
+          color: white;
+        }
+      }
+      & > a {
+        font-family: $font, "sans-serif";
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+      }
+    }
+    .login {
+      color: white;
+      align-self: center;
+      // box-sizing: border-box;
+      // list-style-type:hidden none;
+      border: 1px solid white;
+      border-radius: 30px;
+      padding: 15px 2.5rem;
+      margin-bottom: 12px;
+      // line-height: 0;
+
+      a {
+        color: white;
+        line-height: 0;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0);
+      }
+    }
+  }
+}
+.large-menu .drop {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  & > a {
+    background: url(../img/chevron-down.png) no-repeat 100%;
+    padding-right: 20px;
+  }
+
+  &:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0) !important;
+  }
+}
+
+.large-menu .dropdown {
+  position: absolute;
+  overflow: hidden;
+  padding-left: 0;
+  min-width: 200px;
+  display: none;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateY(40px);
+  will-change: opacity;
+
+  li {
+    padding-left: 0;
+    list-style-type: none;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    & > a {
+      color: #26c195;
+      font-family: $font, "sans-serif";
+      text-decoration: none;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+//Implementing stripe style navigation for the pc header navigation
+.dropdownBg {
+  position: absolute;
+  background: white;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
+    0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  transition: all 0.3s, opacity 0.1s, transform 0.2s;
+  transform-origin: 50% 0;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+
+  .arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: white;
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.trigger-enter .dropdown {
+  display: block;
+}
+.trigger-open .dropdown {
+  opacity: 1;
+}
+.open {
+  opacity: 1;
+}
+
+nav.collapsed-menu,
+button.hamburger {
+  display: none;
+}
+
+/* Hide desktop menu at breakpoint and show mobile menu */
+@include tablet-landscape-down {
+  nav.large-menu {
+    display: none;
+  }
+
+  /* mobile navigation style  */
+  button.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    padding-left: 30px;
+
+    &.hide-mobile-menu {
+      // display: none;
+    }
+  }
+  nav.collapsed-menu {
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: transparent;
+
+    ul {
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .dropdown {
+        display: none;
+      }
+
+      & > li {
+        display: block;
+      }
+    }
+  }
+}
+
+/* Hide */
+.hide {
+  display: none !important;
+}
