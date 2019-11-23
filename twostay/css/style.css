@@ -279,7 +279,7 @@ button.hamburger {
   }
   nav.collapsed-menu ul > li {
     display: block;
-    padding: 35px 0;
+    padding: 25px 0;
   }
   nav.collapsed-menu ul > li a {
     color: white;
