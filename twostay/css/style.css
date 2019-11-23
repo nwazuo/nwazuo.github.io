@@ -272,6 +272,7 @@ button.hamburger {
             align-items: center;
     padding-top: 75px;
     margin: 0;
+    border: 1px solid black;
   }
   nav.collapsed-menu ul .dropdown {
     display: none;
