@@ -45,7 +45,7 @@ $font: "CircularStd";
 }
 
 body {
-  // overflow-x: hidden;
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -256,6 +256,7 @@ button.hamburger {
 
     ul {
       padding-left: 0;
+      box-sizing: border-box;
       position: absolute;
       top: 0;
       height: 100vh;
