@@ -239,6 +239,14 @@ button.hamburger {
         align-self: center;
     z-index: 99;
   }
+  a.hamburger svg .one {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  a.hamburger svg .two {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
   a.hamburger.close svg .one {
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
@@ -247,6 +255,8 @@ button.hamburger {
     width: 28px;
     y: 12;
     x: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
   a.hamburger.close svg .two {
     -webkit-transform-origin: 50% 50%;
@@ -256,6 +266,8 @@ button.hamburger {
     width: 28px;
     x: 0;
     y: 12;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
   nav.collapsed-menu {
     display: block;

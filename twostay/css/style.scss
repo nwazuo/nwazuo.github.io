@@ -239,6 +239,15 @@ button.hamburger {
     align-self: center;
     z-index: 99;
 
+    svg {
+      .one {
+        transition:  all 0.5s;
+      }
+      .two {
+        transition:  all 0.5s;
+      }
+    }
+
      &.close {
       // transform-origin: 50% 50%;
       // transform: rotate(45deg);
@@ -249,6 +258,7 @@ button.hamburger {
         width: 28px;
         y: 12;
         x: 0;
+        transition: all 0.5s;
       }
       .two {
         transform-origin: 50% 50%;
@@ -256,6 +266,7 @@ button.hamburger {
         width: 28px;
         x: 0;
         y: 12;
+        transition: all 0.5s;
       }
       }
     }
