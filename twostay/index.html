@@ -45,15 +45,21 @@
               <li class="login"><a href="#">Log In</a></li>
             </ul>
           </nav>
-          <button class="hamburger show-mobile-menu">
-            <img src="img/hamburger-icon.svg" />
-          </button>
-          <button class="hamburger hide-mobile-menu hide">
-            <img src="img/close-hamburger.svg" />
-          </button>
+          <a class="hamburger">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect class="one" x="8" y="11" width="19" height="4" rx="2" fill="white"/>
+              <rect class="two" y="22" width="28" height="4" rx="2" fill="white"/>
+              </svg>
+          </a>
+          <!-- <a class="hamburger cross" href="#nav">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect class="one" x="8" y="11" width="19" height="4" rx="2" fill="white"/>
+              <rect class="two" y="22" width="28" height="4" rx="2" fill="white"/>
+              </svg>
+          </a> -->
         </header>
       </div>
-      <nav class="collapsed-menu">
+      <nav id="nav" class="collapsed-menu hide-menu">
         <ul>
           <li><a href="#">Home</a></li>
           <li class="drop">

@@ -1,3 +1,4 @@
+//stripe style navigation follow-along
 let triggers = document.querySelectorAll(".drop");
 let dropdownBg = document.querySelector(".dropdownBg");
 const nav = document.querySelector("nav.large-menu");
@@ -45,3 +46,25 @@ triggers.forEach(trigger =>
 triggers.forEach(trigger =>
   trigger.addEventListener("mouseleave", handleLeave)
 );
+
+//mobile menu 
+const trigger  = document.querySelector('.hamburger');
+const navMobile = document.querySelector('.collapsed-menu');
+
+function triggerMenu() {
+  if(!trigger.classList.contains('close')) {
+    trigger.classList.add('close');
+  } else {
+    trigger.classList.remove('close');
+  }
+
+  if(!navMobile.classList.contains('hide-menu')) {
+    navMobile.classList.add('hide-menu');
+  } else {
+    navMobile.classList.remove('hide-menu');
+  }
+}
+
+
+
+trigger.addEventListener('click', triggerMenu)

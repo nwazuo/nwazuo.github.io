@@ -233,12 +233,29 @@ button.hamburger {
   nav.large-menu {
     display: none;
   }
-  /* mobile navigation style  */
-  button.hamburger {
-    display: block;
-    background: none;
-    border: none;
-    padding-left: 30px;
+  a.hamburger {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    z-index: 99;
+  }
+  a.hamburger.close svg .one {
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 28px;
+    y: 12;
+    x: 0;
+  }
+  a.hamburger.close svg .two {
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    width: 28px;
+    x: 0;
+    y: 12;
   }
   nav.collapsed-menu {
     display: block;
@@ -290,7 +307,9 @@ button.hamburger {
 }
 
 /* Hide */
-.hide {
-  display: none !important;
+.hide-menu {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  height: 0 !important;
 }
 /*# sourceMappingURL=style.css.map */
