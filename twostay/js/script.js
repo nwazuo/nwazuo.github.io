@@ -1,5 +1,5 @@
 //stripe style navigation follow-along
-let triggers = document.querySelectorAll(".drop");
+let triggers = document.querySelectorAll(".large-menu .drop");
 let dropdownBg = document.querySelector(".dropdownBg");
 const nav = document.querySelector("nav.large-menu");
 
@@ -34,7 +34,6 @@ function handleEnter() {
 }
 
 function handleLeave() {
-  console.log("Left");
   this.classList.remove("trigger-enter");
   this.classList.remove("trigger-open");
   dropdownBg.classList.remove("open");
@@ -47,24 +46,45 @@ triggers.forEach(trigger =>
   trigger.addEventListener("mouseleave", handleLeave)
 );
 
-//mobile menu 
-const trigger  = document.querySelector('.hamburger');
-const navMobile = document.querySelector('.collapsed-menu');
+//mobile menu
+const trigger = document.querySelector(".hamburger");
+const navMobile = document.querySelector(".collapsed-menu");
 
 function triggerMenu() {
-  if(!trigger.classList.contains('close')) {
-    trigger.classList.add('close');
+  if (!trigger.classList.contains("close")) {
+    trigger.classList.add("close");
   } else {
-    trigger.classList.remove('close');
+    trigger.classList.remove("close");
   }
 
-  if(!navMobile.classList.contains('hide-menu')) {
-    navMobile.classList.add('hide-menu');
+  if (!navMobile.classList.contains("hide-menu")) {
+    navMobile.classList.add("hide-menu");
   } else {
-    navMobile.classList.remove('hide-menu');
+    navMobile.classList.remove("hide-menu");
   }
 }
 
+trigger.addEventListener("click", triggerMenu);
 
+//Mobile menu navigation options
+const drop = document.querySelector(".collapsed-menu .dropdown");
+const subTriggers = document.querySelectorAll(".collapsed-menu .drop > a ");
 
-trigger.addEventListener('click', triggerMenu)
+function hideSubmenu(e) {
+  e.preventDefault();
+  console.log(this);
+  if (this.parentNode.querySelector(".dropdown").classList.contains("hide")) {
+    this.parentNode.querySelector(".dropdown").classList.remove("hide");
+    drop.ontouchend = e => {
+      e.preventDefault();
+    };
+  } else {
+    this.parentNode.querySelector(".dropdown").classList.add("hide");
+    drop.ontouchend = e => {
+      return;
+    };
+  }
+}
+subTriggers.forEach(subTrigger => {
+  subTrigger.addEventListener("click", hideSubmenu);
+});
