@@ -10,6 +10,7 @@
 body {
   overflow-x: hidden;
   width: 100%;
+  font-family: "CircularStd", "sans-serif";
 }
 
 /* Hero Section */
@@ -369,5 +370,57 @@ button.hamburger {
 
 .hide {
   display: none !important;
+}
+
+.intro {
+  max-width: 1600px;
+  margin: 100px auto 50px auto;
+  padding: 0 20px;
+}
+
+.intro .watch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro .watch a {
+  color: white;
+  padding-left: 5px;
+}
+
+.intro .intro-text {
+  color: white;
+  font-size: 3.5em;
+  width: 50%;
+  margin: 15px 0 15px 0;
+}
+
+@media (max-width: 900px) {
+  .intro .intro-text {
+    width: 100%;
+    font-size: 2.625rem;
+  }
+}
+
+.intro .intro-text + p {
+  color: white;
+  width: 50%;
+  font-size: 1.3rem;
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .intro .intro-text + p {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
