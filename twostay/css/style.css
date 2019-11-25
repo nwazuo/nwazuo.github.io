@@ -223,9 +223,11 @@ nav.large-menu > ul .login:hover {
   opacity: 1;
 }
 
-nav.collapsed-menu,
-button.hamburger {
-  display: none;
+@media (min-width: 900px) {
+  nav.collapsed-menu,
+  a.hamburger {
+    display: none;
+  }
 }
 
 /* Hide desktop menu at breakpoint and show mobile menu */
@@ -323,5 +325,10 @@ button.hamburger {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   height: 0 !important;
+}
+
+.intro {
+  margin-top: 100px;
+  max-width: 1600px;
 }
 /*# sourceMappingURL=style.css.map */

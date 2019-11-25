@@ -224,9 +224,11 @@ nav.large-menu {
   opacity: 1;
 }
 
+@include tablet-landscape-up {
 nav.collapsed-menu,
-button.hamburger {
+a.hamburger {
   display: none;
+}
 }
 
 /* Hide desktop menu at breakpoint and show mobile menu */
@@ -317,4 +319,11 @@ button.hamburger {
 .hide-menu {
   transform: translateX(100%);
   height: 0 !important;
+}
+
+//Intro section texts 
+.intro {
+  margin-top: 100px;
+  max-width: 1600px;
+
 }
