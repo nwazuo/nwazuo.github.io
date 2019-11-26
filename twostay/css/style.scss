@@ -56,6 +56,11 @@ body {
   z-index: 1;
   background: url("../img/hero-bg.png") no-repeat;
   background-size: cover;
+  padding-bottom: 70px;
+
+  @include tablet-landscape-down {
+    padding-bottom: 20px;
+  }
 
   &:after {
     content: "";
@@ -362,7 +367,7 @@ a.hamburger {
 //hero text and form section
 .intro {
   max-width: 1600px;
-  margin: 100px auto 50px auto;
+  margin: 100px auto 0 auto;
   padding: 0 20px;
 
   .watch {
@@ -403,25 +408,53 @@ a.hamburger {
       font-size: 1rem;
     }
   }
+
+  //random comment but find ways to use css's default layout default mechanism for responsiveness and then just throw in a media query when it's not enough
   .find {
     background: rgba(48,52,65,0.6);
-    padding: 20px;
+    padding: 20px 20px 0 0;
     max-width: 1600px;
+    margin-top: 80px;
     border-radius: 8px;
     display: flex;
+    flex-wrap: wrap;
+
+    @include tablet-landscape-down {
+      margin-top: 40px;
+    }
 
     input, select, option {
       border: none;
+      margin-bottom: 20px;
       border-radius: 8px;
       padding: 15px;
       background: white;
       box-sizing: borderbox;
     }
     input[name="name"] {
-      flex: 0 1 40%;
+      // max-width: 474px;
+      flex: 4 1 auto;
+      margin: 0 0 20px 20px;      
+      padding-left: 50px;
+      background-size: 15px 15px ;
+      background: white url('../img/icon-location.svg') no-repeat 15px center;
     }
     select {
-      flex: 
+      // max-width: 194px;
+      position: relative;
+      // appearance: none;
+      flex: 2 1 auto;
+      margin: 0 0 20px 20px;
+    }
+    input[type="submit"] {      
+      flex: 2 1 auto;
+      margin: 0 0 20px 20px;
+      background: $accent;
+      color: white;
+
+    &:hover {
+      background: #454545;
+    }
     }
   }
 }
