@@ -62,9 +62,9 @@ input:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1600px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 1.875rem 1.875rem 0 2rem;
+  padding: 1.875rem 50px 0;
 }
 
 @media (max-width: 900px) {
@@ -393,9 +393,9 @@ nav.large-menu > ul .login:hover {
 }
 
 .intro {
-  max-width: 1600px;
+  max-width: 1100px;
   margin: 100px auto 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
 .intro .watch {
@@ -451,7 +451,7 @@ nav.large-menu > ul .login:hover {
 .intro .find {
   background: rgba(48, 52, 65, 0.6);
   padding: 20px 20px 0 0;
-  max-width: 1600px;
+  max-width: 90%;
   margin-top: 80px;
   border-radius: 8px;
   display: -webkit-box;
@@ -510,25 +510,40 @@ nav.large-menu > ul .login:hover {
   background: #454545;
 }
 
-.features {
+main {
   background: #f9f9f9;
-  padding-top: 100px;
+}
+
+.features {
+  padding: 100px 50px 0 50px;
+  max-width: 1100px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.features > * + * {
+  margin-left: 30px;
 }
 
 .features div {
   background: #fff;
+  max-width: 350px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 350px;
-          flex: 1 1 350px;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-radius: 20px;
   padding: 30px;
   text-align: left;
+  -webkit-box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=style.css.map */
