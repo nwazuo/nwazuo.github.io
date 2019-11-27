@@ -19,6 +19,13 @@ body {
   z-index: 1;
   background: url("../img/hero-bg.png") no-repeat;
   background-size: cover;
+  padding-bottom: 70px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding-bottom: 20px;
+  }
 }
 
 .hero:after {
@@ -224,9 +231,11 @@ nav.large-menu > ul .login:hover {
   opacity: 1;
 }
 
-nav.collapsed-menu,
-button.hamburger {
-  display: none;
+@media (min-width: 900px) {
+  nav.collapsed-menu,
+  a.hamburger {
+    display: none;
+  }
 }
 
 /* Hide mobile menu button */
@@ -374,7 +383,7 @@ button.hamburger {
 
 .intro {
   max-width: 1600px;
-  margin: 100px auto 50px auto;
+  margin: 100px auto 0 auto;
   padding: 0 20px;
 }
 
@@ -393,6 +402,10 @@ button.hamburger {
 .intro .watch a {
   color: white;
   padding-left: 5px;
+}
+
+.intro .watch a:hover {
+  color: #00acff;
 }
 
 .intro .intro-text {
@@ -422,5 +435,65 @@ button.hamburger {
     width: 100%;
     font-size: 1rem;
   }
+}
+
+.intro .find {
+  background: rgba(48, 52, 65, 0.6);
+  padding: 20px 20px 0 0;
+  max-width: 1600px;
+  margin-top: 80px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .intro .find {
+    margin-top: 40px;
+  }
+}
+
+.intro .find input, .intro .find select, .intro .find option {
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 15px;
+  background: white;
+  -webkit-box-sizing: borderbox;
+          box-sizing: borderbox;
+}
+
+.intro .find input[name="name"] {
+  -webkit-box-flex: 4;
+      -ms-flex: 4 1 auto;
+          flex: 4 1 auto;
+  margin: 0 0 20px 20px;
+  padding-left: 50px;
+  background-size: 15px 15px;
+  background: white url("../img/icon-location.svg") no-repeat 15px center;
+}
+
+.intro .find select {
+  position: relative;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 auto;
+          flex: 2 1 auto;
+  margin: 0 0 20px 20px;
+}
+
+.intro .find input[type="submit"] {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 auto;
+          flex: 2 1 auto;
+  margin: 0 0 20px 20px;
+  background: #00acff;
+  color: white;
+}
+
+.intro .find input[type="submit"]:hover {
+  background: #454545;
 }
 /*# sourceMappingURL=style.css.map */
