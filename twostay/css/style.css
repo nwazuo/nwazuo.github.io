@@ -13,6 +13,17 @@ body {
   font-family: "CircularStd", "sans-serif";
 }
 
+/* General Overrides */
+select:focus,
+input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 2px solid #00acff !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 /* Hero Section */
 .hero {
   position: relative;
@@ -456,8 +467,10 @@ nav.large-menu > ul .login:hover {
   }
 }
 
-.intro .find input, .intro .find select, .intro .find option {
-  border: none;
+.intro .find input,
+.intro .find select,
+.intro .find option {
+  border: 2px solid rgba(0, 0, 0, 0);
   margin-bottom: 20px;
   border-radius: 8px;
   padding: 15px;
@@ -495,5 +508,27 @@ nav.large-menu > ul .login:hover {
 
 .intro .find input[type="submit"]:hover {
   background: #454545;
+}
+
+.features {
+  background: #f9f9f9;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features div {
+  background: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 350px;
+          flex: 1 1 350px;
+  padding: 30px;
+  text-align: left;
 }
 /*# sourceMappingURL=style.css.map */

@@ -50,6 +50,15 @@ body {
   font-family: $font, "sans-serif";
 }
 
+/* General Overrides */
+select:focus,
+input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid $accent !important;
+  box-sizing: border-box;
+}
+
 /* Hero Section */
 .hero {
   position: relative;
@@ -231,10 +240,10 @@ nav.large-menu {
 }
 
 @include tablet-landscape-up {
-nav.collapsed-menu,
-a.hamburger {
-  display: none;
-}
+  nav.collapsed-menu,
+  a.hamburger {
+    display: none;
+  }
 }
 
 /* Hide mobile menu button */
@@ -411,7 +420,7 @@ a.hamburger {
 
   //random comment but find ways to use css's default layout default mechanism for responsiveness and then just throw in a media query when it's not enough
   .find {
-    background: rgba(48,52,65,0.6);
+    background: rgba(48, 52, 65, 0.6);
     padding: 20px 20px 0 0;
     max-width: 1600px;
     margin-top: 80px;
@@ -423,8 +432,10 @@ a.hamburger {
       margin-top: 40px;
     }
 
-    input, select, option {
-      border: none;
+    input,
+    select,
+    option {
+      border: 2px solid rgba(0, 0, 0, 0);
       margin-bottom: 20px;
       border-radius: 8px;
       padding: 15px;
@@ -434,10 +445,10 @@ a.hamburger {
     input[name="name"] {
       // max-width: 474px;
       flex: 4 1 auto;
-      margin: 0 0 20px 20px;      
+      margin: 0 0 20px 20px;
       padding-left: 50px;
-      background-size: 15px 15px ;
-      background: white url('../img/icon-location.svg') no-repeat 15px center;
+      background-size: 15px 15px;
+      background: white url("../img/icon-location.svg") no-repeat 15px center;
     }
     select {
       // max-width: 194px;
@@ -446,15 +457,31 @@ a.hamburger {
       flex: 2 1 auto;
       margin: 0 0 20px 20px;
     }
-    input[type="submit"] {      
+    input[type="submit"] {
       flex: 2 1 auto;
       margin: 0 0 20px 20px;
       background: $accent;
       color: white;
 
-    &:hover {
-      background: #454545;
+      &:hover {
+        background: #454545;
+      }
     }
-    }
+  }
+}
+
+.features {
+  background: #f9f9f9;
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  div {
+    background: #fff;
+    flex: 1 1 350px;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
   }
 }
