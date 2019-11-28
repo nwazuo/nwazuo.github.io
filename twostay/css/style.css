@@ -398,6 +398,12 @@ nav.large-menu > ul .login:hover {
   padding: 0 50px;
 }
 
+@media (max-width: 900px) {
+  .intro {
+    padding: 0 15px;
+  }
+}
+
 .intro .watch {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,7 +457,7 @@ nav.large-menu > ul .login:hover {
 .intro .find {
   background: rgba(48, 52, 65, 0.6);
   padding: 20px 20px 0 0;
-  max-width: 90%;
+  max-width: 1100px;
   margin-top: 80px;
   border-radius: 8px;
   display: -webkit-box;
@@ -515,21 +521,19 @@ main {
 }
 
 .features {
-  padding: 100px 50px 0 50px;
+  padding: 100px 50px 80px 50px;
   max-width: 1100px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .features > * + * {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .features div {
@@ -545,5 +549,64 @@ main {
   text-align: left;
   -webkit-box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+}
+
+.features div h4 {
+  font-size: calc(22px + 2 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: normal;
+  color: "CircularStd";
+}
+
+.features div p {
+  color: rgba(31, 37, 67, 0.6);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .features {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 50px 20px 0 20px;
+  }
+  .features div {
+    max-width: 100%;
+  }
+  .features > * + * {
+    margin: 20px 0 0 0;
+  }
+}
+
+.video {
+  display: -ms-grid;
+  display: grid;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 50px;
+      grid-template-areas: "video heading" "video textbtn" "video .";
+}
+
+.video .video-el {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: video;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  padding-right: 50px;
+}
+
+.video .heading {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: heading;
+  font-size: calc(32px + 16 * ((100vw - 320px) / 880));
+  color: #1f2543;
+  font-weight: normal;
+}
+
+.video .text-btn-wrap {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: textbtn;
 }
 /*# sourceMappingURL=style.css.map */

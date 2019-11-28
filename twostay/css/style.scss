@@ -379,6 +379,10 @@ nav.large-menu {
   margin: 100px auto 0 auto;
   padding: 0 50px;
 
+  @include tablet-landscape-down {
+    padding: 0 15px;
+  }
+
   .watch {
     display: flex;
     justify-content: flex-start;
@@ -422,7 +426,7 @@ nav.large-menu {
   .find {
     background: rgba(48, 52, 65, 0.6);
     padding: 20px 20px 0 0;
-    max-width: 90%;
+    max-width: 1100px;
     margin-top: 80px;
     border-radius: 8px;
     display: flex;
@@ -473,15 +477,14 @@ main {
   background: #f9f9f9;
 }
 .features {
-  padding: 100px 50px 0 50px;
+  padding: 100px 50px 80px 50px;
   max-width: 1100px;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 
   & > * + * {
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
   div {
@@ -493,5 +496,55 @@ main {
     padding: 30px;
     text-align: left;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+
+    h4 {
+      font-size: calc(22px + 2 * ((100vw - 320px) / (1440 - 320)));
+      font-weight: normal;
+      color: $font;
+    } 
+    p {
+      color: rgba(31, 37, 67, 0.6);
+      line-height: 1.5;
+    }
+  }
+
+  @include tablet-landscape-down {
+    flex-wrap: wrap;
+    padding: 50px 20px 0 20px;
+
+    div {
+      max-width: 100%;
+    } 
+
+    & > * + * {
+      margin: 20px 0 0 0;
+    }
+  }
+}
+
+//Yo. THis is going to be my first time using css grid
+.video {
+  display: grid;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 50px;
+  grid-template-areas: "video heading"
+  "video textbtn"
+  "video ."
+  ;
+
+  .video-el {
+    grid-area: video;
+    justify-self: left;
+    padding-right: 50px;
+  }
+  .heading {
+    grid-area: heading;
+    font-size: calc(32px + 16 * ((100vw - 320px) / 880));
+    color:  $text;
+    font-weight: normal;
+  }
+  .text-btn-wrap {
+    grid-area: textbtn;
   }
 }
