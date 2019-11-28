@@ -428,6 +428,7 @@ nav.large-menu > ul .login:hover {
 .intro .intro-text {
   color: white;
   font-size: 3.5em;
+  font-weight: 800;
   width: 50%;
   margin: 15px 0 15px 0;
 }
@@ -481,8 +482,6 @@ nav.large-menu > ul .login:hover {
   border-radius: 8px;
   padding: 15px;
   background: white;
-  -webkit-box-sizing: borderbox;
-          box-sizing: borderbox;
 }
 
 .intro .find input[name="name"] {
@@ -566,7 +565,7 @@ main {
   .features {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 50px 20px 0 20px;
+    padding: 50px 20px 60px 20px;
   }
   .features div {
     max-width: 100%;
@@ -581,32 +580,128 @@ main {
   display: grid;
   max-width: 1100px;
   margin: 0 auto;
+  grid-gap: 0 50px;
   padding: 0 50px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas: "video heading" "video textbtn" "video .";
 }
 
+@media (max-width: 900px) {
+  .video {
+    padding: 0 20px;
+        grid-template-areas: "heading" "video" "textbtn";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-gap: 0;
+    max-width: 100%;
+  }
+}
+
 .video .video-el {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 50px;
+  background: url(../img/kitchen.png) no-repeat;
+  width: 100%;
+  background-size: cover;
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: video;
-  -ms-grid-column-align: left;
-      justify-self: left;
-  padding-right: 50px;
+  -webkit-transition: background-size 0.5s ease;
+  transition: background-size 0.5s ease;
+  justify-self: left;
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .video .video-el {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+}
+
+.video .video-el img {
+  display: block;
+  position: absolute;
+  z-index: 200;
+}
+
+.video .video-el:after {
+  content: "";
+  border-radius: 8px;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 10;
+}
+
+.video .video-el:hover {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  background-size: 120%;
 }
 
 .video .heading {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: heading;
-  font-size: calc(32px + 16 * ((100vw - 320px) / 880));
+  font-size: calc(32px + 16 * ((100vw - 320px) / (1920 - 320)));
   color: #1f2543;
   font-weight: normal;
+  font-weight: 600;
+  margin: 20px 0;
 }
 
 .video .text-btn-wrap {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: textbtn;
+}
+
+.video .text-btn-wrap p {
+  line-height: 1.6;
+  font-size: calc(14px + 4 * ((100vw - 320px) / (1920 - 320)));
+  color: rgba(31, 37, 67, 0.6);
+  margin: 0;
+}
+
+.video .text-btn-wrap button {
+  border: none;
+  border-radius: 8px;
+  background: #00acff;
+  color: white;
+  font-size: calc(14px + 4 * ((100vw - 320px) / (1920 - 320)));
+  padding: 1em 2.9em;
+  margin-top: 5em;
+}
+
+@media (max-width: 900px) {
+  .video .text-btn-wrap button {
+    margin-top: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.video .text-btn-wrap button:hover {
+  background: #454545;
 }
 /*# sourceMappingURL=style.css.map */

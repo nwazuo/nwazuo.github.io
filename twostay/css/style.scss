@@ -401,6 +401,7 @@ nav.large-menu {
   .intro-text {
     color: white;
     font-size: 3.5em;
+    font-weight: 800;
     width: 50%;
     margin: 15px 0 15px 0;
 
@@ -444,7 +445,6 @@ nav.large-menu {
       border-radius: 8px;
       padding: 15px;
       background: white;
-      box-sizing: borderbox;
     }
     input[name="name"] {
       // max-width: 474px;
@@ -501,7 +501,7 @@ main {
       font-size: calc(22px + 2 * ((100vw - 320px) / (1440 - 320)));
       font-weight: normal;
       color: $font;
-    } 
+    }
     p {
       color: rgba(31, 37, 67, 0.6);
       line-height: 1.5;
@@ -510,11 +510,11 @@ main {
 
   @include tablet-landscape-down {
     flex-wrap: wrap;
-    padding: 50px 20px 0 20px;
+    padding: 50px 20px 60px 20px;
 
     div {
       max-width: 100%;
-    } 
+    }
 
     & > * + * {
       margin: 20px 0 0 0;
@@ -527,24 +527,107 @@ main {
   display: grid;
   max-width: 1100px;
   margin: 0 auto;
+  grid-gap: 0 50px;
   padding: 0 50px;
-  grid-template-areas: "video heading"
-  "video textbtn"
-  "video ."
-  ;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "video heading"
+    "video textbtn"
+    "video .";
+
+  @include tablet-landscape-down {
+    padding: 0 20px;
+    grid-template-areas:
+      "heading"
+      "video"
+      "textbtn";
+    justify-content: center;
+    grid-template-columns: 100%;
+    grid-gap: 0;
+    max-width: 100%;
+  }
 
   .video-el {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    background: url(../img/kitchen.png) no-repeat;
+    width: 100%;
+    background-size: cover;
     grid-area: video;
+    transition: background-size 0.5s ease;
     justify-self: left;
-    padding-right: 50px;
+    border-radius: 8px;
+    // box-sizing: border-box;
+
+    @include tablet-landscape-down {
+      height: 300px;
+      margin-bottom: 30px;
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      z-index: 200;
+    }
+
+    &:after {
+      content: "";
+      border-radius: 8px;
+      width: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      z-index: 10;
+    }
+
+    &:hover {
+      transition: all 0.6s ease;
+      background-size: 120%;
+    }
   }
   .heading {
     grid-area: heading;
-    font-size: calc(32px + 16 * ((100vw - 320px) / 880));
-    color:  $text;
+    font-size: calc(32px + 16 * ((100vw - 320px) / (1920 - 320)));
+    color: $text;
     font-weight: normal;
+    font-weight: 600;
+    margin: 20px 0;
   }
   .text-btn-wrap {
     grid-area: textbtn;
+
+    & p {
+      line-height: 1.6;
+      font-size: calc(14px + 4 * ((100vw - 320px) / (1920 - 320)));
+      color: rgba(31, 37, 67, 0.6);
+      margin: 0;
+    }
+
+    button {
+      border: none;
+      border-radius: 8px;
+      background: $accent;
+      color: white;
+      font-size: calc(14px + 4 * ((100vw - 320px) / (1920 - 320)));
+      padding: 1em 2.9em;
+      margin-top: 5em;
+
+      @include tablet-landscape-down {
+        margin-top: 2em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &:hover {
+        background: #454545;
+      }
+    }
   }
 }
