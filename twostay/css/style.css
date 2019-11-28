@@ -711,11 +711,17 @@ main {
   margin: 0 auto;
 }
 
+@media (max-width: 900px) {
+  .deals {
+    padding: 0 15px;
+  }
+}
+
 .deals .heading {
   font-size: calc(32px + 16 * ((100vw - 320px) / (1920 - 320)));
   font-weight: normal;
   color: #1f2543;
-  margin: 15px 0;
+  margin: 0.3em 0;
 }
 
 .deals > small {
@@ -774,6 +780,93 @@ main {
 }
 
 .slider-overflow-container {
-  width: 120%;
+  margin-top: 2rem;
+}
+
+.container-slide-deals {
+  width: 110%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.container-slide-deals > * + * {
+  margin-left: calc(30px + 10 * ((100vw - 320px) / (1920 - 320)));
+}
+
+.container-slide-deals .slide-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: calc(280px + 80 * ((100vw - 320px) / (1920 - 320)));
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.container-slide-deals .slide-item .image-contain {
+  height: calc(330px + 110 * ((100vw - 320px) / (1920 - 320)));
+  border-radius: 8px;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
+
+.container-slide-deals .slide-item .featured {
+  display: inline-block;
+  font-size: calc(14px + 2 * ((100vw - 320px) / (1920 - 320)));
+  background: #26c195;
+  padding: 1em 1.25em;
+  color: white;
+  margin: 1.5em 0 0 1.5em;
+  border-radius: 8px;
+}
+
+.container-slide-deals .slide-item h5 {
+  font-size: calc(22px + 2 * ((100vw - 320px) / (1920 - 320)));
+  font-family: "CircularStd";
+  color: #1f2543;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.container-slide-deals .slide-item small {
+  font-size: 0.47em;
+  text-decoration: line-through;
+  color: rgba(31, 37, 67, 0.6);
+}
+
+.container-slide-deals .slide-item span {
+  color: #00acff;
+}
+
+.container-slide-deals .slide-item span .small {
+  font-size: 0.47em;
+}
+
+.container-slide-deals .slide-item .deal-prop {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  font-size: 0.47em;
+  color: rgba(31, 37, 67, 0.6);
+  margin: 5px 0;
+}
+
+.container-slide-deals .slide-item .deal-prop > * + * {
+  border-left: 1px solid rgba(31, 37, 67, 0.3);
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.container-slide-deals .slide-item .deal-prop img {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  margin-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */
