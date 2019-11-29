@@ -88,3 +88,29 @@ function hideSubmenu(e) {
 subTriggers.forEach(subTrigger => {
   subTrigger.addEventListener("click", hideSubmenu);
 });
+
+//slider scroll feature
+const slideArea = document.querySelector(".container-slide-deals");
+const slide = document.querySelector(".slide-item");
+const controls = document.querySelectorAll(".slider-buttons");
+
+function handleScroll(e) {
+  const slideItemWidth = slide.getBoundingClientRect().width;
+  if (e.target.classList.contains("left-btn")) {
+    console.log(-slideItemWidth);
+    slideArea.scroll({
+      left: -slideItemWidth + slideArea.scrollLeft,
+      behavior: "smooth"
+    });
+  } else {
+    slideArea.scroll({
+      left: slideItemWidth + slideArea.scrollLeft,
+      behavior: "smooth"
+    });
+    console.log(slideItemWidth);
+  }
+}
+
+controls.forEach(control => {
+  control.addEventListener("click", handleScroll);
+});
