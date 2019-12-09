@@ -921,6 +921,12 @@ footer {
   padding: 40px 0;
 }
 
+@media (max-width: 900px) {
+  footer {
+    padding: 20px 0;
+  }
+}
+
 footer .footer-contain {
   margin: 0 auto;
   padding: 0 50px;

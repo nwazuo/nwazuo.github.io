@@ -803,6 +803,10 @@ footer {
   background: #454545;
   padding: 40px 0;
 
+  @include tablet-landscape-down {
+    padding: 20px 0;
+  }
+
   .footer-contain {
     margin: 0 auto;
     padding: 0 50px;
