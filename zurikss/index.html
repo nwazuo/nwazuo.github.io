@@ -74,10 +74,16 @@
         font-size: 20px;
         font-weight: bold;
         font-family: sans-serif;
+        cursor: pointer;
       }
 
       .carousel__controls:hover {
         color: rgba(0, 0, 0, 0.8);
+        text-decoration: underline;
+      }
+
+      .carousel__controls.active {
+        color: red;
         text-decoration: underline;
       }
 
@@ -90,7 +96,7 @@
         width: 100%;
         height: 100vh;
         margin: auto;
-        padding: 0 4rem;
+        padding: 0 0;
         z-index: 100;
         transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
       }
@@ -112,6 +118,7 @@
       }
       .carousel__button--prev,
       .carousel__button--next {
+        display: none;
         position: absolute;
         top: 50%;
         width: 3rem;
@@ -152,6 +159,8 @@
         totalItems = items.length,
         slide = 0,
         moving = true;
+      let numberCtrl = document.querySelectorAll(".carousel__controls");
+      let autoplay;
 
       // Set classes
       function setInitialClasses() {
@@ -160,6 +169,7 @@
         items[totalItems - 1].classList.add("prev");
         items[0].classList.add("active");
         items[1].classList.add("next");
+        numberCtrl[0].classList.add("active");
       }
 
       // Set event listeners
@@ -168,6 +178,16 @@
           prev = document.getElementsByClassName("carousel__button--prev")[0];
         next.addEventListener("click", moveNext);
         prev.addEventListener("click", movePrev);
+
+        numberCtrl.forEach(number => {
+          number.addEventListener("click", function() {
+            if (!moving) {
+              console.log(number.dataset.index, "number clicked");
+              slide = Number(number.dataset.index);
+              moveCarouselTo(slide);
+            }
+          });
+        });
       }
 
       function disableInteraction() {
@@ -218,13 +238,22 @@
             items[newPrevious].className = itemClassName + " prev";
             items[slide].className = itemClassName + " active";
             items[newNext].className = itemClassName + " next";
+            //add classes for highlighting position of slide through number indicators
+            numberCtrl.forEach(number => {
+              number.classList.remove("active");
+            });
+
+            numberCtrl[slide].classList.add("active");
+
+            //restart interval after every move
+            clearInterval(autoplay);
+            autoplay = setInterval(autoPlay, 3000);
           }
         }
       }
 
       // Next navigation handler
       function moveNext() {
-        console.log("next");
         // Check if moving
         if (!moving) {
           // If it's the last slide, reset to 0, else +1
@@ -234,6 +263,7 @@
             slide++;
           }
           // Move carousel to updated slide
+          console.log(slide);
           moveCarouselTo(slide);
         }
       }
@@ -254,9 +284,21 @@
         }
       }
 
+      //auto play
+      function autoPlay() {
+        console.log("tick");
+        if (slide >= items.length - 1) {
+          slide = 0;
+        } else {
+          slide++;
+        }
+        moveCarouselTo(slide);
+      }
+
       function initCarousel() {
         setInitialClasses();
         setEventListeners();
+        autoplay = setInterval(autoPlay, 3000);
         // Set moving to false so that the carousel becomes interactive
         moving = false;
       }
