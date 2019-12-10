@@ -1,0 +1,146 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*---- Slider Styles ----*/
+.carousel-wrapper {
+  overflow: hidden;
+  width: 50%;
+  float: right;
+  /* align-self: flex-end; */
+}
+
+.carousel-wrapper * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.carousel {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/* carousel controls */
+.carousel__controls__container {
+  position: absolute;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 4em;
+  bottom: 4em;
+}
+
+.carousel__controls__container > * + * {
+  padding-left: 40px;
+}
+
+.carousel__controls {
+  color: #888888;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.carousel__controls:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: underline;
+}
+
+.carousel__controls.active {
+  color: #ff0099;
+  text-decoration: underline;
+}
+
+.carousel__photo {
+  opacity: 0;
+  position: absolute;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  padding: 0 0;
+  z-index: 100;
+  -webkit-transition: opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+  transition: transform 0.5s, opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+}
+
+.carousel__photo.initial,
+.carousel__photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+.carousel__photo.prev,
+.carousel__photo.next {
+  z-index: 800;
+}
+
+.carousel__photo.prev {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  /* Move 'prev' item to the left */
+}
+
+.carousel__photo.next {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  /* Move 'next' item to the right */
+}
+
+.carousel__button--prev,
+.carousel__button--next {
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  /* Sit on top of everything */
+  border: 1px solid black;
+}
+
+.carousel__button--prev {
+  left: 0;
+}
+
+.carousel__button--next {
+  right: 0;
+}
+
+.carousel__button--prev::after,
+.carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+/*# sourceMappingURL=main.css.map */

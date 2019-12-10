@@ -4,10 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="fonts/style.css" rel="stylesheet" />
     <title>Zurikss Graphics</title>
   </head>
   <body>
+    <div class="content">
+      <nav class="content__navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Our Prices</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Tools</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+      <h1 class="heading">Get a Portrait</h1>
+      <p class="heading__paragraph">
+        Turn your favourite photos into well detailed cartoon portraits.
+      </p>
+      <button class="button">Order Now!</button>
+      <div class="social">
+        <ul>
+          <li><img src="img/social-facebook.svg" /></li>
+          <li><img src="img/social-instagram.svg" /></li>
+          <li><img src="img/social-twitter.svg" /></li>
+          <li><img src="img/social-behance.svg" /></li>
+          <li><img src="img/social-dribbble.svg" /></li>
+        </ul>
+      </div>
+    </div>
     <div class="carousel-wrapper">
+      <img class="cart" src="img/shopping_cart.svg" />
       <div class="carousel">
         <div
           class="carousel__photo initial"
@@ -73,7 +102,7 @@
         color: #888888;
         font-size: 20px;
         font-weight: bold;
-        font-family: sans-serif;
+        font-family: "Exo 2", sans-serif;
         cursor: pointer;
       }
 
@@ -83,7 +112,7 @@
       }
 
       .carousel__controls.active {
-        color: red;
+        color: #ff0099;
         text-decoration: underline;
       }
 
