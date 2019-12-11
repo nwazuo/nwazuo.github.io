@@ -1,3 +1,15 @@
+/*---- responsive breakpoints ----*/
+@mixin desktop-down {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin tablet-landscape-down {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -35,7 +47,7 @@ body {
   color: #888888;
   font-size: 20px;
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: "Exo 2", sans-serif;
   cursor: pointer;
 }
 
@@ -113,4 +125,129 @@ body {
 .carousel__button--next::after {
   left: 47%;
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*--- General Styles ------*/
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/*---- Main styles ----*/
+
+//hide mobile stuff
+.mobile-menu,
+.mobile-icons-container {
+  display: none;
+}
+
+.content {
+  padding: 5.625em 0 0 8.125em;
+  margin: 0;
+  width: 50%;
+  box-sizing: border-box;
+  max-height: 100vh;
+}
+
+.content-navigation .list {
+  font-family: "Exo 2", sans-serif;
+  display: flex;
+  padding-right: 3.75em;
+  justify-content: space-between;
+
+  .link {
+    color: black;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .link::after {
+    opacity: 0;
+    left: 0;
+    z-index: -1;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 0%;
+    background: #ff0099;
+    transition: width 0.3s;
+  }
+  .link:hover::after {
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 80%;
+    background: #ff0099;
+    transition: width 0.3s;
+  }
+}
+
+.shopping-pc {
+  position: absolute;
+  right: 130px;
+  top: 100px;
+  z-index: 100;
+  mix-blend-mode: exclusion;
+}
+
+.heading {
+  margin-top: calc(
+    80px + (100vh - 768px) * ((150 - 80) / (1080 - 768))
+  ); // * ((1080px - 768px) / (150px - 30px)));
+  padding-right: 40px;
+  box-sizing: border-box;
+  line-height: 1.1;
+  font-family: "Exo 2", sans-serif;
+  font-size: 120px;
+  margin-bottom: 0;
+}
+.heading__paragraph {
+  padding-right: 40px;
+  margin: 0;
+  line-height: 1.63;
+  font-family: "Questrial", sans-serif;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.button {
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 17px;
+  color: white;
+  text-transform: uppercase;
+  background: #ff0099;
+  padding: 1.3em 2.2em;
+  margin-top: 40px;
+  border: none;
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+}
+
+.social {
+  margin-top: calc(80px + (100vh - 768px) * ((150 - 80) / (1080 - 768)));
+
+  .list {
+    display: flex;
+
+    & > * + * {
+      padding-left: 32px;
+    }
+    svg {
+      fill: black;
+    }
+    svg:hover {
+      fill: #ff0099;
+    }
+  }
 }

@@ -1,3 +1,4 @@
+/*---- responsive breakpoints ----*/
 body {
   padding: 0;
   margin: 0;
@@ -44,7 +45,7 @@ body {
   color: #888888;
   font-size: 20px;
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: "Exo 2", sans-serif;
   cursor: pointer;
 }
 
@@ -142,5 +143,142 @@ body {
   left: 47%;
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*--- General Styles ------*/
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/*---- Main styles ----*/
+.mobile-menu,
+.mobile-icons-container {
+  display: none;
+}
+
+.content {
+  padding: 5.625em 0 0 8.125em;
+  margin: 0;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-height: 100vh;
+}
+
+.content-navigation .list {
+  font-family: "Exo 2", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 3.75em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-navigation .list .link {
+  color: black;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.content-navigation .list .link::after {
+  opacity: 0;
+  left: 0;
+  z-index: -1;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 0%;
+  background: #ff0099;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.content-navigation .list .link:hover::after {
+  left: 0;
+  opacity: 1;
+  z-index: -1;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 80%;
+  background: #ff0099;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.shopping-pc {
+  position: absolute;
+  right: 130px;
+  top: 100px;
+  z-index: 100;
+  mix-blend-mode: exclusion;
+}
+
+.heading {
+  margin-top: calc( 80px + (100vh - 768px) * ((150 - 80) / (1080 - 768)));
+  padding-right: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.1;
+  font-family: "Exo 2", sans-serif;
+  font-size: 120px;
+  margin-bottom: 0;
+}
+
+.heading__paragraph {
+  padding-right: 40px;
+  margin: 0;
+  line-height: 1.63;
+  font-family: "Questrial", sans-serif;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.button {
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 17px;
+  color: white;
+  text-transform: uppercase;
+  background: #ff0099;
+  padding: 1.3em 2.2em;
+  margin-top: 40px;
+  border: none;
+}
+
+.button:hover {
+  background: black;
+  color: white;
+}
+
+.social {
+  margin-top: calc(80px + (100vh - 768px) * ((150 - 80) / (1080 - 768)));
+}
+
+.social .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social .list > * + * {
+  padding-left: 32px;
+}
+
+.social .list svg {
+  fill: black;
+}
+
+.social .list svg:hover {
+  fill: #ff0099;
 }
 /*# sourceMappingURL=main.css.map */
