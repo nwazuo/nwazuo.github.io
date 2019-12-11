@@ -43,7 +43,7 @@ body {
 
 .carousel__controls {
   color: #888888;
-  font-size: 20px;
+  font-size: calc(16px + (20 - 16) * ((100vw - 1000px) / (1920 - 1000)));
   font-weight: bold;
   font-family: "Exo 2", sans-serif;
   cursor: pointer;
@@ -157,14 +157,15 @@ body {
 
 /*---- Main styles ----*/
 .mobile-menu,
-.mobile-icons-container {
+.checkbox_toggle,
+.hamburger {
   display: none;
 }
 
 .content {
   padding: 0 0 0 8.125em;
   padding-top: calc(30px + (90 - 30) * ((100vh - 400px) / (960 - 400)));
-  padding-left: calc(60px + (130 - 60) * ((100vw - 1100px) / (1920 - 1100)));
+  padding-left: calc(60px + (130 - 60) * ((100vw - 1000px) / (1920 - 1000)));
   margin: 0;
   width: 50%;
   -webkit-box-sizing: border-box;
@@ -174,6 +175,7 @@ body {
 
 .content-navigation .list {
   font-family: "Exo 2", sans-serif;
+  font-size: calc(14px + (16 - 14) * ((100vw - 1000px) / (1920 - 1000)));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,6 +224,8 @@ body {
   top: calc(40px + (90 - 40) * ((100vh - 400px) / (960 - 400)));
   z-index: 100;
   mix-blend-mode: exclusion;
+  -webkit-filter: saturate(0);
+          filter: saturate(0);
 }
 
 .heading {
@@ -231,7 +235,7 @@ body {
           box-sizing: border-box;
   line-height: 1.1;
   font-family: "Exo 2", sans-serif;
-  font-size: calc(100px + (120 - 100) * ((100vw - 1100px) / (1920 - 1100)));
+  font-size: calc(80px + (120 - 80) * ((100vw - 1100px) / (1920 - 1100)));
   margin-bottom: 0;
 }
 
@@ -240,14 +244,14 @@ body {
   margin: 0;
   line-height: 1.63;
   font-family: "Questrial", sans-serif;
-  font-size: 20px;
+  font-size: calc(16px + (20 - 16) * ((100vw - 1100px) / (1920 - 1100)));
   margin-top: 15px;
 }
 
 .button {
   font-family: "Exo 2", sans-serif;
   letter-spacing: 0.1em;
-  font-size: 17px;
+  font-size: calc(14px + (17 - 14) * ((100vw - 1100px) / (1920 - 1100)));
   color: white;
   text-transform: uppercase;
   background: #ff0099;
@@ -281,5 +285,119 @@ body {
 
 .social .list svg:hover {
   fill: #ff0099;
+}
+
+/*---- Breakpoint styles ----*/
+@media (max-width: 900px) {
+  .shopping-pc {
+    display: none;
+  }
+  .content-navigation {
+    display: none;
+  }
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content,
+  .carousel-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+  .content {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px 50px;
+  }
+  .carousel__photo {
+    height: calc(100vw / 1.33);
+  }
+  .carousel__controls {
+    display: none;
+  }
+  .heading,
+  .heading__paragraph {
+    padding: 0;
+  }
+  .heading {
+    margin-top: 60px;
+    font-size: calc(72px + (86 - 72) * ((100vw - 350px) / (900 - 350)));
+  }
+  .heading__paragraph {
+    font-size: 1rem;
+  }
+  .social {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .mobile-icons-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 15px 15px 0 15px;
+  }
+  .mobile-icons-container .hamburger {
+    display: block;
+  }
+  /*---- Mobile menu ----*/
+  .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    position: absolute;
+    min-height: 100vh;
+    background: linear-gradient(175.87deg, #bd3085 36.47%, #ff326f 94.3%);
+    color: white;
+    width: 100vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 1000;
+  }
+  .mobile-menu .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .mobile-menu .list > * + * {
+    padding-top: 10vh;
+  }
+  .mobile-menu .list li a {
+    color: #fff;
+    font-family: "Exo 2", sans-serif;
+    font-size: 16px;
+  }
+  input[type="checkbox"]:checked ~ .mobile-menu {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transform: transform 0.5s;
+            transform: transform 0.5s;
+  }
+  .icon-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
