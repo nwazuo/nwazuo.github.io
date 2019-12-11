@@ -162,7 +162,9 @@ body {
 }
 
 .content {
-  padding: 5.625em 0 0 8.125em;
+  padding: 0 0 0 8.125em;
+  padding-top: calc(30px + (90 - 30) * ((100vh - 400px) / (960 - 400)));
+  padding-left: calc(60px + (130 - 60) * ((100vw - 1100px) / (1920 - 1100)));
   margin: 0;
   width: 50%;
   -webkit-box-sizing: border-box;
@@ -188,7 +190,6 @@ body {
 }
 
 .content-navigation .list .link::after {
-  opacity: 0;
   left: 0;
   z-index: -1;
   bottom: 0;
@@ -217,8 +218,8 @@ body {
 
 .shopping-pc {
   position: absolute;
-  right: 130px;
-  top: 100px;
+  right: calc(60px + (130 - 60) * ((100vw - 1100px) / (1920 - 1100)));
+  top: calc(40px + (90 - 40) * ((100vh - 400px) / (960 - 400)));
   z-index: 100;
   mix-blend-mode: exclusion;
 }
@@ -230,7 +231,7 @@ body {
           box-sizing: border-box;
   line-height: 1.1;
   font-family: "Exo 2", sans-serif;
-  font-size: 120px;
+  font-size: calc(100px + (120 - 100) * ((100vw - 1100px) / (1920 - 1100)));
   margin-bottom: 0;
 }
 
@@ -251,7 +252,7 @@ body {
   text-transform: uppercase;
   background: #ff0099;
   padding: 1.3em 2.2em;
-  margin-top: 40px;
+  margin-top: calc(30px + (40 - 30) * ((100vh - 400px) / (960 - 400)));
   border: none;
 }
 
