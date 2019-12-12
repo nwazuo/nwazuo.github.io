@@ -276,7 +276,7 @@ body {
 
   .content {
     box-sizing: border-box;
-    padding: 10px 50px;
+    padding: 10px 15px;
   }
 
   .carousel__photo {
@@ -321,7 +321,7 @@ body {
     // display: none;
     transform: translateX(-100%);
     transition: transform 0.5s;
-    position: absolute;
+    position: fixed;
     min-height: 100vh;
     background: linear-gradient(175.87deg, #bd3085 36.47%, #ff326f 94.3%);
     color: white;
