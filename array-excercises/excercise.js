@@ -25,7 +25,8 @@ function choiceEngine(array) {
 }
 
 //output result for excercise 1
-choiceEngine(color);
+let outputOne = document.querySelector(".answer-one");
+outputOne.addEventListener("click", () => console.log(choiceEngine(color)));
 
 //2.
 const myColor = ["Red", "Green", "White", "Black"];
@@ -36,7 +37,8 @@ function colorJoin(array) {
 }
 
 //output result for excercise 2
-colorJoin(myColor);
+let outputTwo = document.querySelector(".answer-two");
+outputTwo.addEventListener("click", () => console.log(colorJoin(myColor)));
 
 //3.
 const employees = [
@@ -204,24 +206,37 @@ const employees = [
 
 //3a. - I'm not exactly clear on if we are returning an array of objects or an array of employee names
 // I'll return an array of objects
-console.log(employees.filter(emp => emp["Job"] == "Web Developer"));
+let outputThreeA = document.querySelector(".answer-three-a");
+outputThreeA.addEventListener("click", () =>
+  console.log(employees.filter(emp => emp["Job"] == "Web Developer"))
+);
 
 //3b.
-console.log(
-  employees.filter(
-    emp => emp["Job"] == "Web Developer" && emp["Country"] == "Nigeria"
+let outputThreeB = document.querySelector(".answer-three-b");
+outputThreeB.addEventListener("click", () =>
+  console.log(
+    employees.filter(
+      emp => emp["Job"] == "Web Developer" && emp["Country"] == "Nigeria"
+    )
   )
 );
 
 //3c.
-console.log(employees.filter(emp => emp["age"] < 20));
-
+let outputThreeC = document.querySelector(".answer-three-c");
+outputThreeC.addEventListener("click", () =>
+  console.log(employees.filter(emp => emp["age"] < 20))
+);
 //3d.
-console.log(employees.filter(emp => emp["active"]));
-
+let outputThreeD = document.querySelector(".answer-three-d");
+outputThreeD.addEventListener("click", () =>
+  console.log(employees.filter(emp => emp["active"]))
+);
 //3e.
-console.log(
-  employees.reduce((prev, current) =>
-    prev.salary > current.salary ? prev : current
+let outputThreeE = document.querySelector(".answer-three-e");
+outputThreeE.addEventListener("click", () =>
+  console.log(
+    employees.reduce((prev, current) =>
+      prev.salary > current.salary ? prev : current
+    )
   )
 );

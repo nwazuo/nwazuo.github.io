@@ -1,0 +1,43 @@
+body {
+  font-family: "Work Sans", sans-serif;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 0%;
+  margin-top: 70px;
+}
+
+section {
+  margin-top: 50px;
+}
+
+.link-contain {
+  border: 2px solid white;
+  width: 450px;
+  padding: 10px;
+  margin: 0 auto 30px auto;
+}
+
+.link-contain h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.bar {
+  height: 100%;
+  background: white;
+  width: 0px;
+  transition: width 2s;
+}
+
+.link-contain:hover {
+  background: white;
+  cursor: pointer;
+}
+.link-contain:hover h2 {
+  color: black;
+}
