@@ -79,6 +79,8 @@ label {
   padding: 12px;
   width: 100%;
   margin-top: 10px;
+  transform: scale(1, 1);
+  transition: 0.5s transform ease;
 }
 
 .registration.form input:focus {
@@ -88,6 +90,8 @@ label {
   box-sizing: border-box;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
+  transform: scale(1.1, 1.1);
+  transition: 0.5s transform ease;
 }
 
 .registration.form div.field {
@@ -136,10 +140,12 @@ button.btn-big {
   padding: 12px;
   color: white;
   margin-bottom: 50px;
+  transition: 0.5s background ease;
 }
 
 button.btn-big:hover {
   background: #0f0f0f;
+  transition: 0.5s background ease;
 }
 
 /* Screens at 1024px and below */
