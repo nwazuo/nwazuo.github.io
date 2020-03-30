@@ -57,7 +57,7 @@ function pagerGenerate(start, end, active) {
 
 //utility functions
 function fetchImages(start, limit = 10) {
-  const url = `http://jsonplaceholder.typicode.com/photos?_start=${start}&_limit=11`;
+  const url = `https://jsonplaceholder.typicode.com/photos?_start=${start}&_limit=11`;
   console.log(url);
   fetch(url)
     .then(data => {
