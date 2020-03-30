@@ -1,0 +1,147 @@
+//Media BreakPoints
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-down {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background: #eee;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto 0 auto;
+}
+
+nav {
+  background: #549e28;
+  margin: 0;
+  padding: 30px 0;
+
+  @include for-tablet-landscape-down() {
+    text-align: center;
+  }
+
+  h1 {
+    color: white;
+    font-size: calc(24px + (36 - 24) * ((100vw - 480px) / (1920 - 480)));
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+}
+.body {
+  text-align: center;
+}
+
+ul.images {
+  padding: 0;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  li {
+    list-style-type: none;
+    width: 320px;
+
+    &:hover {
+      box-shadow: 0px 0 20px rgb(194, 194, 194);
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    figcaption {
+      background: white;
+      font-weight: bold;
+      margin-top: -4px;
+      padding: 20px 10px;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  position: sticky;
+  bottom: 20px;
+  // left: 50%;
+  // transform: translateX(-50%);
+  padding: 0;
+  text-align: center;
+  margin: 30px auto 20px auto;
+  justify-content: center;
+
+  div {
+    box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+  }
+
+  li {
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    background: white;
+    list-style-type: none;
+    font-family: "Lato", sans-serif;
+
+    @include for-tablet-landscape-down() {
+      padding: 10px;
+    }
+
+    &:hover {
+      // font-weight: bold;
+      color: #42831d;
+      background: #eee;
+      cursor: pointer;
+    }
+
+    &.active {
+      color: white;
+      background: #549e28;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+li.disabled {
+  cursor: not-allowed;
+  color: #aaa;
+
+  &:hover {
+    cursor: not-allowed;
+    background: white;
+    color: #aaa;
+  }
+}

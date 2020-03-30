@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background: #eee;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto 0 auto;
+}
+
+nav {
+  background: #549e28;
+  margin: 0;
+  padding: 30px 0;
+}
+
+@media (max-width: 900px) {
+  nav {
+    text-align: center;
+  }
+}
+
+nav h1 {
+  color: white;
+  font-size: calc(24px + (36 - 24) * ((100vw - 480px) / (1920 - 480)));
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.body {
+  text-align: center;
+}
+
+ul.images {
+  padding: 0;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  grid-gap: 20px;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+ul.images li {
+  list-style-type: none;
+  width: 320px;
+}
+
+ul.images li:hover {
+  -webkit-box-shadow: 0px 0 20px #c2c2c2;
+          box-shadow: 0px 0 20px #c2c2c2;
+}
+
+ul.images li figure {
+  margin: 0;
+  text-align: center;
+}
+
+ul.images li img {
+  width: 100%;
+}
+
+ul.images li figcaption {
+  background: white;
+  font-weight: bold;
+  margin-top: -4px;
+  padding: 20px 10px;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 20px;
+  padding: 0;
+  text-align: center;
+  margin: 30px auto 20px auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.links div {
+  -webkit-box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.links li {
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  background: white;
+  list-style-type: none;
+  font-family: "Lato", sans-serif;
+}
+
+@media (max-width: 900px) {
+  .links li {
+    padding: 10px;
+  }
+}
+
+.links li:hover {
+  color: #42831d;
+  background: #eee;
+  cursor: pointer;
+}
+
+.links li.active {
+  color: white;
+  background: #549e28;
+  border: 1px solid transparent;
+}
+
+li.disabled {
+  cursor: not-allowed;
+  color: #aaa;
+}
+
+li.disabled:hover {
+  cursor: not-allowed;
+  background: white;
+  color: #aaa;
+}
+/*# sourceMappingURL=style.css.map */
