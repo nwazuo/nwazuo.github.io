@@ -111,13 +111,17 @@ ul.images {
 
   li {
     padding: 15px 20px;
-    border: 1px solid #ddd;
+    border-left: 1px solid #ddd;
     background: white;
     list-style-type: none;
     font-family: "Lato", sans-serif;
 
+    &:last-child {
+      border-right: 1px solid #ddd;
+    }
+
     @include for-tablet-landscape-down() {
-      padding: 10px;
+      padding: 10px 15px;
     }
 
     &:hover {
