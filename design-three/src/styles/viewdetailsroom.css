@@ -1,0 +1,400 @@
+@media (max-width: 575.98px) {
+    .hamb-icon_room-details{
+        display: block !important;
+        width: 25px !important;
+        height: 50% !important;
+        margin-left: auto !important;
+    }
+    .nav-items_room-details{
+        display: none !important;
+    }
+    .nav-bar_view-details{
+        margin-bottom: 50px !important;
+        margin-top: 20px !important;
+    }
+    .view-details{
+        padding: 10px 20px !important;
+    }
+    .room-details{
+        width: 100% !important;
+    }
+    .main-img_room-details{
+        width: 100% !important;
+        height: 100% !important;
+        padding: 4px !important;
+    }
+    .charming-castle{
+        font-size: 15px !important;
+        margin-bottom: 0px !important;
+    }
+    .room-price, .ratings-number_room-details{
+        font-size: 12px !important;
+    }
+    .star-icon{
+        width: 9px;
+        height: 9px;
+    }
+    .row-2_room-details{
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    .bed-icon_room-details{
+        width: 15px;
+        height: 15px;
+    }
+    .bed_room-details{
+        font-size: 10px !important;
+        margin: 0px !important;
+    }
+    .title_room-details{
+        font-size: 18px !important;
+    }
+    .description{
+        font-size: 15px !important;
+    }
+    .lorem-description{
+        font-size: 15px !important;
+    }
+    .btn_book-now{
+        padding: 8px 30px !important;
+        font-size: 10px !important;
+    }
+    .btn-favourite{
+        padding: 7px 15px !important;
+        font-size: 10px !important;
+        margin-left: 10px !important;
+    }
+    .buttons_room-details{
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+    }
+    .body_view-details{
+        flex-direction: column !important;
+    }
+    .reviews{
+        width: 100% !important;
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
+    .back-reviews{
+        display: none !important;
+    }
+}
+@media (min-width: 768px ){
+    .hamb-icon_room-details{
+        display: block !important;
+        width: 25px !important;
+        height: 50% !important;
+        margin-left: auto !important;
+    }
+    .room-details{
+        width: 100% !important;
+    }
+    .nav-items_room-details{
+        display: none !important;
+    }
+    .view-details{
+        padding: 20px 30px !important;
+    }
+    .main-img_room-details{
+        width: 100% !important;
+        height: 100% !important;
+        padding: 4px !important;
+    }
+    .buttons_room-details{
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+    }
+    .body_view-details{
+        flex-direction: column !important;
+    }
+    .reviews{
+        width: 100% !important;
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
+    .back-reviews{
+        display: none !important;
+    }
+}
+@media (min-width: 1024px ) {
+    .nav-items_room-details{
+        display: flex !important;
+    }
+    .room-details{
+        width: 50% !important;
+    }
+    .bed_room-details{
+        margin: 0px !important;
+    }
+    .hamb-icon_room-details{
+        display: none !important;
+    }
+    .body_view-details{
+        flex-direction: row !important;
+    }
+    .reviews{
+        width: 40% !important;
+        margin-left: 10% !important;
+        margin-top: 0px !important;
+    }
+    .back-reviews{
+        display: block !important;
+    }
+}
+@media (min-width: 1440px ) {
+    .buttons_room-details{
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: initial !important;
+    }
+    .view-details{
+        padding: 50px 160px !important;
+    }
+    .bed_room-details{
+        margin: 10px !important;
+    }
+    .title_room-details{
+        margin-bottom: 20px !important;
+    }
+    .hamb-icon_room-details{
+        display: none !important;
+    }
+    /* .body_view-details{
+        display: flex !important;
+        flex-direction: row !important;
+    } */
+}
+.body_view-details{
+    display: flex;
+    flex-direction: row;
+}
+.nav-bar_view-details{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 74px;
+}
+.room-details{
+    width: 60%;
+}
+.view-details{
+    padding: 50px 160px;
+    background: rgb(241, 241, 241);
+    /* height: 200vh; */
+}
+.nav-items_room-details{
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav-item_room-details{
+    margin: 0px 30px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(13, 36, 60, 0.75);
+}
+.nav-item-red_room-details{
+    margin: 0px 30px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #F13054;
+}
+.star_room-details{
+    color: #FF7B01;
+    font-size: 25px;
+}
+.nav-item-btn_room-details{
+    margin: 0px 0px 0px 30px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #0D243C;
+    background: transparent;
+    padding: 10px 20px;
+    border: 1px solid #191E51;
+    border-radius: 5px;
+}
+p{
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal; 
+    color: #191E51;
+    margin: 0px;
+}
+.title_room-details{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 39px;
+    margin-bottom: 20px;
+}
+.charming-castle{
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.main-img_room-details{
+    max-width: auto;
+    height: auto !important;
+    padding: 10px;
+    background: white;
+}
+.ratings-number_room-details{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 17px;
+    line-height: 22px;
+    color: rgba(25, 30, 81, 0.7);
+    margin-left: 10px;
+}
+.room-price{
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 25px;
+    margin-top: 10px;
+}
+.row_room-details{
+    display: flex;
+    flex-direction: row;
+    width: auto; 
+}
+.price_room-details{
+    margin-left: auto;
+}
+.icon_room-details{
+    background: rgba(241, 48, 84, 0.2);
+    border-radius: 5px; 
+    padding: 5px 10px;
+}
+.row-2_room-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.row-icon_room-details{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.bed_room-details{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 10px;
+}
+.div-descriptions_room-details{
+    margin-top: 50px;
+}
+.description{
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 25px;
+
+}
+.lorem-description{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: justify;
+    margin-top: 10px;
+}
+.buttons_room-details{
+    margin-top: 50px;
+}
+.btn_book-now{
+    background: #F55573;
+    border-radius: 5px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 60px;
+}
+.btn-favourite{
+    background: rgb(241, 241, 241);
+    border-radius: 5px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(25, 30, 81, 0.7);
+    padding: 15px 30px;
+    border: 1px solid #191E51;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+.reviews{
+    width: 40%;
+    margin-left: 10%;
+}
+.back-reviews{
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 22px;
+    color: #F13054;
+    text-align: right;
+}
+.description-reviews{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(25, 30, 81, 0.88);
+}
+.date-reviews{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(25, 30, 81, 0.7);
+}
+.profile-reviews{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.name-reviews{
+    margin-left: 20px;
+}
+.comment-reviews{
+    margin-top: 20px;
+}
+.lorem-reviews{
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: justify;
+    color: rgba(25, 30, 81, 0.7);
+}
+.feedbacks-reviews{
+    background: #FFFFFF;
+    border: 1px solid #D8D8DF;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(65, 82, 118, 0.04);
+    border-radius: 6px;
+    padding: 30px;
+    margin-top: 20px;
+}
+.title-reviews{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #191E51;
+}

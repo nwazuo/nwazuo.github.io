@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap";
+
+/* CSS reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* CONTAINER */
+.facility-details-container {
+  padding: 0 7% 0 7%;
+  font-family: "DM Sans", sans-serif;
+  max-width: 100vw;  
+  width: 100vw;
+  height: 100vh;
+}
+.facility-details-container nav ul .facility-hamburger{
+  display: none;
+}
+/* NAV BAR STYLES */
+.facility-details-container nav {
+  margin-top: 40px;
+  width: 100%;
+}
+.facility-details-container nav ul {
+  display: flex;
+  align-items: center;
+}
+.facility-details-container nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(13, 36, 60, 0.75);
+  transition: ease .3s;
+}
+
+/* LOGO STYLE */
+.facility-details-logo {
+  margin-right: auto;
+}
+.facility-details-container nav ul li:not(.facility-details-logo) {
+  margin-right: 50px;
+}
+.facility-details-container nav ul li {
+  list-style-type: none;
+}
+.facility-details-container nav ul li:nth-child(6) {
+  padding: 11px 25px;
+  margin-right: 0;
+  border: 1px solid #e0e0e0;
+  font-weight: 500;
+  font-size: 16px;
+  color: #0D243C;
+  order: 0;
+  align-self: center;
+  border-radius: 5px;
+}
+.facility-details-container nav ul li a:hover:not(.facility-details-logo){
+  color: #f13054;
+}
+.facility-details-active {
+  color: #f13054 !important;
+}
+
+/* fACILITY TITLE */
+.facility-details-title-control {
+  display: flex;
+  margin-top: 76px;
+  margin-bottom: 29px;
+  align-items: center;
+}
+
+.facility-details-title-control h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 39px;
+  color: #191e51;
+  margin-right: auto;
+}
+.facility-details-title-control div a {
+  text-decoration: none;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 22px;
+  color: #f13054;
+}
+
+/* FACILITY INNER CONTAIER STYLE GRID */
+.facilities-details-inner-container {
+  display: grid;
+  grid-template-columns: 60% 35%;
+  grid-template-rows: 1fr;
+  grid-gap: 5%;
+  width: 100%;
+}
+
+.facility-details-desc-section .facility-img {
+  padding: 4px;
+  width: auto;
+  height: auto;
+  left: 160px;
+  top: 219px;
+  background: #ffffff;
+  box-shadow: 4px 4px 14px rgba(65, 82, 118, 0.1);
+  border-radius: 6px;
+}
+
+.facility-details-desc-section .facility-img img {
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* FACILITY DESCRIPTION TITLE START */
+.facility-details-desc-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* REVIEWS STYLING */
+
+#facilities-review-ctn {
+  background-color: white;
+  height: 120vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-ctn {
+  height: 100%;
+}
+
+.review-head {
+  margin: none;
+  margin-bottom: 0px;
+  padding: 3%;
+  padding-bottom: 0;
+}
+
+.review-boxes { 
+  margin: 0;
+  padding: 3%;
+  padding-right: 1.8%;
+  overflow-y: scroll;
+  overflow-y: hidden;
+  height: 80%;
+  box-shadow: 4px 4px 10px 10px rgba(80, 84, 92, 0.1);
+}
+
+.review-boxes::-webkit-scrollbar {
+  display: none;
+}
+.box {
+  background-color: white;
+  margin: none;
+  margin-bottom: 3%;
+  border-radius: 6px;
+  border: grey 1px solid;
+  padding: 4% 4.5%;
+  padding-right: 4%;
+  box-sizing: border-box;
+}
+
+.reviewer-details {
+  width: 130px;
+  margin-bottom: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.reviewer-details img {
+  height: 50px;
+  width: 50px;
+  border-radius: 6%;
+}
+
+.name_date {
+  float: right;
+}
+
+.reviewer-name {
+  font-weight: 800;
+}
+
+.review-date {
+  font-weight: 100;
+}
+
+.reviewer-comment {
+  font-size: 1vw;
+  margin-top: -10px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  /* CONTAINER */
+  .facility-details-container {
+    padding: 0 4% 0 4%;
+  }
+  .facilities-details-inner-container {
+    display: grid;
+    grid-template-columns: 60% 35%;
+    grid-template-rows: 1fr;
+    grid-gap: 5%;
+    width: 100%;
+  }
+}
+/* TABLET */
+@media screen and (max-width: 768px) {
+  .facility-details-container {
+    padding: 0 4% 0 4%;
+  }
+    .facility-details-container nav ul li:not(.facility-details-logo):not(.facility-hamburger) {
+      display: none;
+    }
+  /* MENU STYLES HERE */
+  .facility-details-container nav ul .facility-hamburger{
+    display: block;
+  }
+  .menu-btn {
+    position: relative;
+    z-index: 3;
+    margin-left: 60%;
+    top: -45px;
+    height: 30%;
+    width: 30%;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  
+  .menu-btn .hamburger {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+  }
+  
+  .menu-btn .hamburger .btn-line {
+    width: 50px;
+    height: 4px;
+    position: relative;
+    background: #191e51;
+    border-radius: 2px;
+    top: 24px;
+    margin: 6.5px 0;
+  }
+  
+  .menu-btn .hamburger .btn-line:nth-child(1) {
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+  }
+  
+  .menu-btn .hamburger .btn-line:nth-child(2) {
+    -webkit-transition-delay: .625s;
+            transition-delay: .625s;
+  }
+  
+  .menu-btn .hamburger .btn-line:nth-child(3) {
+    -webkit-transition-delay: .75s;
+            transition-delay: .75s;
+  }
+  
+  .menu-btn.close .hamburger .btn-line {
+    width: 0%;
+  }
+  
+  .menu-btn.close .hamburger .btn-line:nth-child(1) {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+  
+  .menu-btn.close .hamburger .btn-line:nth-child(2) {
+    -webkit-transition-delay: .125s;
+            transition-delay: .125s;
+  }
+  
+  .menu-btn.close .hamburger .btn-line:nth-child(3) {
+    -webkit-transition-delay: .25s;
+            transition-delay: .25s;
+  }
+
+  .facilities-details-inner-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5%;
+    width: 100%;
+  }
+  .review-boxes { 
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100vw;
+    padding: 3%;
+    padding-right: 1.8%;
+    overflow-y: scroll;
+    overflow-y: hidden; 
+    height: auto;
+    box-shadow: 4px 4px 10px 10px rgba(80, 84, 92, 0.1);
+  }
+  .box {
+    background-color: white;
+    margin: none;
+    margin-bottom: 2%;
+    border-radius: 6px;
+    padding: 2% 2.5%;
+    padding-right: 4%;
+    box-sizing: border-box;
+    margin-left: 2%;
+  }
+  .review-head {
+    margin: none;
+    padding-left: 5%
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+}
