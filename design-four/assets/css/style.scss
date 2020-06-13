@@ -731,6 +731,12 @@ h2 {
 
         p {
             @include font-size(18px);
+            text-align: center;
+            line-height: 1.5;
+
+            @include phone-only {
+                font-size: 14px;
+            }
         }
     }
 
@@ -1151,6 +1157,145 @@ h2 {
             span {
                 text-align: left;
             }
+        }
+    }
+}
+
+//contact page
+.header-module.contact {
+    background: url('../images/contact-us-bg.jpg');
+}
+
+.contact-body {
+    @media (max-width: 1040px) {
+        .body-container {
+         max-width: 90%;
+         margin: auto;
+        }
+     }
+}
+
+.contact-container {
+    display: flex;
+    justify-content: flex-start;
+
+    @include phone-only {
+        display: block;
+    }
+}
+
+.contact-form {
+    position: relative;
+    @include rfs('-157px', 'top');
+    background: white;
+    border: 0.5px solid #e5e5e5;
+    max-width: 542px;
+    @include padding(32px);
+    flex: 542px;
+
+    @include tablet-landscape-down{
+        top: -120px;
+    }
+
+    @include phone-only {
+        top: -60px;
+    }
+
+    h3 {
+        @include font-size(36px);
+        color: #333;
+        font-family: $fontHeadings;
+        @include padding-bottom(30px);
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    form {
+        margin-top: 23px;
+
+        label {
+            display: block;
+            color: #666;
+            @include font-size(18px);
+            font-family: $fontAlternative;
+            margin-bottom: 25px;
+            line-height: 1.5;
+
+            input, textarea {
+                display: block;
+                height: 50px;
+                width: 100%;
+                border: 1px solid #e5e5e5;
+                box-sizing: border-box;
+                padding: 10px 20px;
+
+                &:focus {
+                    outline-color: #885a87;
+                }
+            }
+
+            @include phone-only {
+                input {
+                    height: 45px;
+                }
+            }
+
+            textarea {
+                height: 120px;
+                
+            }
+
+        }
+                button {
+                    background: #611760;
+                    padding: 15px 24px;
+                    color: white;
+                    @include font-size(24px);
+                    border: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #885a87;
+                    }
+
+
+
+                    @include tablet-landscape-down {
+                        @include font-size(18px);
+                    }
+                }
+    }
+}
+
+.contact-info {
+    position: relative;
+    margin-left: 70px;
+    align-self: top;
+    margin-top: 80px;
+
+    @include phone-only {
+        margin-top: 30px;
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .label {
+        background: rgba(0,0,0,0);
+        border: 2px solid #611760;
+        color: #611760;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet-landscape-down {
+            @include font-size(18px);
         }
     }
 }

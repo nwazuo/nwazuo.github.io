@@ -1056,6 +1056,14 @@ h2 {
 
 .bottom-section .body-container p {
   font-size: 1.125rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (max-width: 599px) {
+  .bottom-section .body-container p {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1040px) {
@@ -1709,5 +1717,193 @@ h2 {
 
 .all-rooms .feature-double-images .feature-double-images-item .tag-contain span {
   text-align: left;
+}
+
+.header-module.contact {
+  background: url("../images/contact-us-bg.jpg");
+}
+
+@media (max-width: 1040px) {
+  .contact-body .body-container {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (max-width: 599px) {
+  .contact-container {
+    display: block;
+  }
+}
+
+.contact-form {
+  position: relative;
+  top: -157px;
+  background: white;
+  border: 0.5px solid #e5e5e5;
+  max-width: 542px;
+  padding: calc(1.325rem + 0.9vw);
+  min-width: 0vw;
+  -webkit-box-flex: 542px;
+      -ms-flex: 542px;
+          flex: 542px;
+}
+
+@media (min-width: 1200px) {
+  .contact-form {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-form {
+    top: -120px;
+  }
+}
+
+@media (max-width: 599px) {
+  .contact-form {
+    top: -60px;
+  }
+}
+
+.contact-form h3 {
+  font-size: calc(1.35rem + 1.2vw);
+  min-width: 0vw;
+  color: #333;
+  font-family: "Bree Serif", Georgia, Serif;
+  padding-bottom: calc(1.3125rem + 0.75vw);
+  min-width: 0vw;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+@media (min-width: 1200px) {
+  .contact-form h3 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-form h3 {
+    padding-bottom: 1.875rem;
+  }
+}
+
+.contact-form form {
+  margin-top: 23px;
+}
+
+.contact-form form label {
+  display: block;
+  color: #666;
+  font-size: 1.125rem;
+  font-family: "DM Sans", Arial, sans-serif;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.contact-form form label input, .contact-form form label textarea {
+  display: block;
+  height: 50px;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.contact-form form label input:focus, .contact-form form label textarea:focus {
+  outline-color: #885a87;
+}
+
+@media (max-width: 599px) {
+  .contact-form form label input {
+    height: 45px;
+  }
+}
+
+.contact-form form label textarea {
+  height: 120px;
+}
+
+.contact-form form button {
+  background: #611760;
+  padding: 15px 24px;
+  color: white;
+  font-size: calc(1.275rem + 0.3vw);
+  min-width: 0vw;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .contact-form form button {
+    font-size: 1.5rem;
+  }
+}
+
+.contact-form form button:hover {
+  background: #885a87;
+}
+
+@media (max-width: 900px) {
+  .contact-form form button {
+    font-size: 1.125rem;
+  }
+}
+
+.contact-info {
+  position: relative;
+  margin-left: 70px;
+  -ms-flex-item-align: top;
+      -ms-grid-row-align: top;
+      align-self: top;
+  margin-top: 80px;
+}
+
+@media (max-width: 599px) {
+  .contact-info {
+    margin-top: 30px;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.contact-info p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.contact-info .label {
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid #611760;
+  color: #611760;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 900px) {
+  .contact-info .label {
+    font-size: 1.125rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
