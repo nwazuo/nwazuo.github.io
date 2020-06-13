@@ -22,16 +22,37 @@
             <div class="header-top">
                 <div class="header-top-container">
                     <div class="header-logo">
-                        <img srcset="assets/images/logo-header-revised.png 1x, assets/images/logo-header-revised-2x.png 2x" width="80px" height="46px"/>
-                    </div>
+                        <a href="index.html"><img srcset="assets/images/logo-header-revised.png 1x, assets/images/logo-header-revised-2x.png 2x" width="80px" height="46px"/></a>
+                </div>
                     <h4>
                         Facilities
                     </h4>
                     <div class="header-menu">
-                        <h4>
-                            Menu
-                        </h4>
-                        <img src="assets/images/hamburger-menu.svg" />
+                        <input name="checkbox_toggle" id="checkbox_toggle" class="menu-toggle" type="checkbox" />
+                        <label for="checkbox_toggle" id="hamburger">
+                            <h4>
+                                Menu
+                            </h4>
+                            <img src="assets/images/hamburger-menu.svg" />
+                        </label>
+                        <nav class="hamburger-menu"><div class="header-top-container">
+                            
+                                <label for="checkbox_toggle" class="close-btn">
+                                    <h4>Close</h4>
+                                    <img
+                                        src="assets/images/close-menu.svg"
+                                        class="close"
+                                /></label>
+                                <ul class="menu">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="rooms.html">Rooms</a></li>
+                                    <li>
+                                        <a href="facilities.html">Facilities</a>
+                                    </li>
+                                    <li><a href="contact-us.html">Contact</a></li>
+                                </ul>
+                        </div>
+                        </nav>
                     </div>
                 </div>
             </div>

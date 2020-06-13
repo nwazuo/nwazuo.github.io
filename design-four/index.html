@@ -21,17 +21,38 @@
         <div class="header-module">
             <div class="header-top">
                 <div class="header-top-container">
-                    <div class="header-logo">
-                            <img srcset="assets/images/logo-header-revised.png 1x, assets/images/logo-header-revised-2x.png 2x" width="80px" height="46px"/>
-                    </div>
+                        <div class="header-logo">
+                                <a href="index.html"><img srcset="assets/images/logo-header-revised.png 1x, assets/images/logo-header-revised-2x.png 2x" width="80px" height="46px"/></a>
+                        </div>
                     <h4>
                         Home
                     </h4>
                     <div class="header-menu">
-                        <h4>
-                            Menu
-                        </h4>
-                        <img src="assets/images/hamburger-menu.svg" />
+                        <input name="checkbox_toggle" id="checkbox_toggle" class="menu-toggle" type="checkbox" />
+                        <label for="checkbox_toggle" id="hamburger">
+                            <h4>
+                                Menu
+                            </h4>
+                            <img src="assets/images/hamburger-menu.svg" />
+                        </label>
+                        <nav class="hamburger-menu"><div class="header-top-container">
+                            
+                                <label for="checkbox_toggle" class="close-btn">
+                                    <h4>Close</h4>
+                                    <img
+                                        src="assets/images/close-menu.svg"
+                                        class="close"
+                                /></label>
+                                <ul class="menu">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="rooms.html">Rooms</a></li>
+                                    <li>
+                                        <a href="facilities.html">Facilities</a>
+                                    </li>
+                                    <li><a href="contact-us.html">Contact</a></li>
+                                </ul>
+                        </div>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -51,13 +72,22 @@
         <div class="body-container">
             <!-- start:reusable video component-->
             <div class="tour-video-container home">
-                <video class="tour-video" poster="assets/images/tour-video-poster.jpg">
-                    <source src="assets/images/tour-video.mp4" type="video/mp4" />
+                <video
+                    class="tour-video"
+                    poster="assets/images/tour-video-poster.jpg"
+                >
+                    <source
+                        src="assets/images/tour-video.mp4"
+                        type="video/mp4"
+                    />
                 </video>
                 <div class="tour-video-overlay">
                     <div class="overlay-border">
                         <h2>Resort Tour</h2>
-                        <img class="play-btn" src="assets/images/play-circle.svg" />
+                        <img
+                            class="play-btn"
+                            src="assets/images/play-circle.svg"
+                        />
                     </div>
                 </div>
             </div>
@@ -181,31 +211,31 @@
                         </span>
                     </div>
                     <div class="fit medium">
-                        <img src="assets/images/lagos-1.jpg" class="medium"/>
+                        <img src="assets/images/lagos-1.jpg" class="medium" />
                     </div>
                     <div class="fit large">
-                        <img src="assets/images/lagos-2.jpg" class="large"/>
+                        <img src="assets/images/lagos-2.jpg" class="large" />
                     </div>
                     <div class="fit small1">
-                        <img src="assets/images/lagos-3.jpg" class="small1"/>
+                        <img src="assets/images/lagos-3.jpg" class="small1" />
                     </div>
                     <div class="fit small2">
-                        <img src="assets/images/lagos-4.jpg" class="small2"/>
+                        <img src="assets/images/lagos-4.jpg" class="small2" />
                     </div>
                 </div>
                 <!-- end: reusable features item-->
             </div>
             <div class="home-stats">
                 <div class="stats-item">
-                    <img src="assets/images/tripadvisor.png"/>
+                    <img src="assets/images/tripadvisor.png" />
                     <p>4.5 Bubble Rating</p>
                 </div>
                 <div class="stats-item">
-                    <img src="assets/images/booking.com.png"/>
+                    <img src="assets/images/booking.com.png" />
                     <p>7.5 Rating</p>
                 </div>
                 <div class="stats-item">
-                    <img src="assets/images/google-logo.png"/>
+                    <img src="assets/images/google-logo.png" />
                     <p>4.5 Rating</p>
                 </div>
             </div>
@@ -214,22 +244,32 @@
         <div class="footer">
             <div class="body-container">
                 <div class="top-section">
-                        <img srcset="assets/images/hotel-tropica-small.png 1x, assets/images/hotel-tropica-small-2x.png 2x" />
+                    <img
+                        srcset="
+                            assets/images/hotel-tropica-small.png    1x,
+                            assets/images/hotel-tropica-small-2x.png 2x
+                        "
+                    />
                     <div class="subscribe">
                         <p>Subscribe to our news letter</p>
                         <form>
-                            <input type="text" placeholder="Enter your email address"/>
+                            <input
+                                type="text"
+                                placeholder="Enter your email address"
+                            />
                             <button>Subscribe</button>
                         </form>
                     </div>
                 </div>
-                
+
                 <div class="mid-section">
                     <div class="info">
                         <li>info@hoteltropica.com</li>
                         <li>+2347002200022</li>
-                        <li>Ikegun Ibeju-Lekki Local Government Area,<br>
-                             Epe Expressway</li>
+                        <li>
+                            Ikegun Ibeju-Lekki Local Government Area,<br />
+                            Epe Expressway
+                        </li>
                     </div>
                     <div class="menu-1">
                         <li><a href="rooms.html">Rooms</a></li>
@@ -249,7 +289,6 @@
                         <img src="assets/images/youtube.svg" />
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="bottom-section">
