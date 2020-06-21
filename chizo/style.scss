@@ -144,11 +144,12 @@ a {
   font-weight: bold;
   font-size: 36px;
   color: #1d2e3f;
+  text-align: center;
   margin-bottom: 10px;
 }
 .colored_div {
   width: 150px;
-  height: 8px;
+  height: 6px;
   background-color: #fb3f5c;
 }
 .empty_div {
@@ -193,7 +194,7 @@ hr {
   width: 124px;
   margin-left: auto;
   margin-right: auto;
-  border: 5px solid var(--primary-pink);
+  border: 3px solid var(--primary-pink);
 }
 /* Class specific styles */
 
@@ -228,6 +229,7 @@ hr {
 }
 
 .helpdiv .helpflex .helploan .helploan-box {
+  background: white;
   box-shadow: 1px 2.5px 4px rgba(222, 208, 208, 0.3),
     inset 1px 2.5px 4px rgba(222, 208, 208, 0.3);
   padding: 45px;
@@ -243,24 +245,17 @@ hr {
 .helpdiv .helpflex .helpinvest .helpinvest-box p {
   margin-bottom: 23px;
 }
-.helpdiv .helpflex .helpinvest .helpinvest-box .pattern2 {
-  position: absolute;
 
-  width: 100%;
-  height: auto;
-  top: -8%;
-  right: -12%;
-}
 
 .helpdiv .helpflex .helpinvest {
   flex-basis: 47%;
   width: 47%;
 }
 .helpdiv .helpflex .helpinvest .helpinvest-box {
+  background: white;
   box-shadow: 1px 2.5px 4px rgba(222, 208, 208, 0.3),
     inset 1px 2.5px 4px rgba(222, 208, 208, 0.3);
   padding: 45px;
-  padding-top: 108px;
   position: relative;
 }
 
@@ -537,24 +532,6 @@ footer hr {
   margin: 1em 12em !important;
 }
 
-.footer-bottom {
-  display: flex;
-  flex-flow: row;
-  margin: 1.5em 10em;
-  color: #000000;
-  font-size: 0.9rem;
-  margin-bottom: 2em;
-}
-
-.footer-bottom > .footer-bottom-right {
-  margin-left: 2em;
-  margin-bottom: 1.5em;
-}
-
-.footer-bottom > .footer-bottom-left {
-  margin-right: auto;
-}
-
 /*  
   * Putting together the landing page. 
   * Corrective css styles
@@ -677,6 +654,11 @@ span.sign:hover {
   margin: 0 auto 15px 0;
   @include margin-bottom(30px);
   width: 90%;
+
+  @include tablet-landscape-down {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 #buttons {
@@ -702,8 +684,12 @@ span.sign:hover {
   border-radius: 12px;
   background: #fb3f5c;
   color: white;
-  font-size: 1.5rem;
+  @include font-size(1.5rem);
   border: 1.5px solid rgba(0, 0, 0, 0);
+
+  @include tablet-landscape-down {
+    @include font-size(1.125rem);
+  }
 
   &.alt-empty {
     border: 1.5px solid #fb3f5c;
@@ -746,8 +732,12 @@ span.sign:hover {
   height: 24px;
   position: relative;
   cursor: pointer;
-  display: inline-block;
+  display: none;
   z-index: 999;
+
+  @include tablet-landscape-down {
+    display: inline-block;
+  }
 
   span {
     background-color: #1d2e3f;
@@ -921,10 +911,6 @@ span.sign:hover {
       text-align: center;
       @include font-size(2.125rem);
     }
-
-    .colored_div {
-      height: 4px;
-    }
   }
 
   p {
@@ -933,6 +919,7 @@ span.sign:hover {
 
   p.words {
     text-align: justify;
+    line-height: 1.6;
   }
 }
 
@@ -951,6 +938,10 @@ span.sign:hover {
 
       .helploan {
         margin-bottom: 40px;
+      }
+
+      .helploan-box, .helpinvest-box {
+        background: #fff !important;
       }
     }
   }
@@ -1062,6 +1053,11 @@ p.accordion {
       @include font-size(3rem);
       width: 70%;
       margin: auto;
+
+      @include phone-only {
+        font-size: 36px;
+        width: 95%;
+      }
     }
 
     & > div {
@@ -1091,6 +1087,10 @@ p.accordion {
       align-items: center;
     }
 
+    @include phone-only {
+      max-width: 90%;
+    }
+
     input {
       border: none;
       width: 75%;
@@ -1103,11 +1103,13 @@ p.accordion {
       }
 
       @include tablet-landscape-down {
-        width: 90%;
+        width: 100%;
+        padding-left: 0;
         text-align: center;
         height: 55px;
         margin-bottom: 15px;
       }
+
     }
     button {
       width: 25%;
@@ -1127,11 +1129,187 @@ p.accordion {
   }
 }
 
+/* reusable section title */
+.section-title {
+  @include font-size(2.8rem);
+  width: fit-content;
+  margin: auto;
+  position: relative;
+  color: #1d2e3f;
+  line-height: 1;
+  font-weight: bold;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+  @include padding-bottom(20px);
+
+  &:before {
+    content: "";
+    height: 6px;
+    background: #fb3f5c;
+    position: absolute;
+    bottom: 0;
+    width: calc(40px + 10%);
+    margin: auto;
+    text-align: center;
+    left: 50%;
+    transform-origin: center;
+    transform: translateX(-50%);
+  }
+}
+
+/* Blog section */
+.blog {
+  @include padding-top(117px);
+}
+
+.card-deck {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  @include margin-top(75px);
+}
+
+.card {
+  border-radius: 23px;
+  box-shadow: 0px 18.42px 18.42px rgba(202, 198, 198, 0.3);
+
+  .card-img {
+    width: 100%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-content {
+    @include padding(32px);
+    text-align: center;
+
+    pre,
+    h4,
+    p {
+      text-align: justify;
+    }
+
+    pre {
+      @include font-size(16px);
+      line-height: 1.5;
+      @include margin-bottom(25px);
+      width: 100%;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    h4 {
+      @include font-size(20px);
+      color: #1d2e3f;
+    }
+
+    p {
+      @include font-size(18px);
+      line-height: 1.6;
+      margin: 0;
+      @include margin-bottom(25px);
+      // text-align: left;
+    }
+  }
+}
+
+.sponsors {
+  @include padding-top(132px);
+
+  .sponsors-container {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    @include padding-top(30px);
+    @include padding-bottom(30px);
+    background: rgba(79, 93, 106, 0.2);
+    overflow-x: auto;
+    @include margin-top(50px);
+
+    & > * + * {
+      // @include margin-left(70px);
+    }
+
+    .sponsors-item {
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 35px;
+      min-width: 100px !important;
+      min-height: 100px;
+      color: black;
+      @include font-size(1.8rem);
+    }
+  }
+}
+
 /* footer section */
 footer {
-  background-color: none;
-  background: url("https://res.cloudinary.com/udemic/image/upload/v1592715478/sample/fundmylaptop/fundmylaptop/footer-clip_cx8a5i.svg");
+  background-color: rgba(0, 0, 0, 0);
   @include padding-top(150px);
   @include margin-top(100px);
   background-repeat: none;
+  position: relative;
+  background-image: linear-gradient(
+    0deg,
+    #fec5ce 90%,
+    rgba(9, 9, 121, 0) 90%,
+    rgba(0, 212, 255, 0) 66%
+  );
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: url("https://res.cloudinary.com/udemic/image/upload/v1592729501/sample/fundmylaptop/fundmylaptop/footer-clip_1_jgwp3c.svg");
+    background-size: cover;
+    z-index: -100;
+  }
+
+  .footer-top {
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    // justify-items: center;
+  }
+
+  .footer-bottom {
+    margin: 0;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+      color: #04172a;
+    }
+
+    @include tablet-landscape-down {
+      flex-direction: column;
+    }
+
+    .copyright {
+      margin-right: auto;
+
+
+    }
+
+    & > * + * {
+      margin-left: 20px;
+
+      @include tablet-landscape-down {
+        margin-left: 0;
+      }
+    }
+  }
 }
