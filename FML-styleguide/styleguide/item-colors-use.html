@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
     <link rel="stylesheet" href="kss-assets/vendor/prism.css">
     <link rel="stylesheet" href="kss-assets/css/kss.css">
-    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../styles/bootstrap-css/bootstrap.css"/>
 
   </head>
 
@@ -69,20 +69,19 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-button-primary">
+            <header class="kss-section kss-section--depth-2" id="kssref-colors-use">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>src/buttons/_buttons.scss</span>, line <span>10</span></p>
+                <p class="kss-section__source">Source: <span>src/colors/_colors.scss</span>, line <span>25</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-button-primary">
+              <a class="kss-section__permalink" href="#kssref-colors-use">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">3.1</span>
-                  <span class="kss-section__name">Primary Button</span>
+                  <span class="kss-section__ref">1.2</span>
+                  <span class="kss-section__name">Use with Buttons</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Primary Button according to design style guide</p>
-<p>Use the <code>btn-fml-[primary|secondary|accent]</code> class to apply any of the project colors colors to a button</p>
+                <div class="kss-section__description"><p>How to use with buttons. Replace <code>{{modifier_class}}</code> with appropriate indicated classes</p>
 </div>
 
             </article>
@@ -92,22 +91,32 @@
 
                   <h2 class="kss-modifiers__name">Default styling</h2>
 
-                <div class="kss-modifiers__example"><button class="btn [modifier class]">A button</button></div>
+                <div class="kss-modifiers__example"><button class="btn btn-{{modifier_class}}">Button</button></div>
 
                   <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.btn-fml-primary</h2>
-                    <p class="kss-modifiers__description">primary button with primary color</p>
-                    <div class="kss-modifiers__example"><button class="btn btn-fml-primary">A button</button></div>
+                    <h2 class="kss-modifiers__name">.fml-primary</h2>
+                    <p class="kss-modifiers__description">Bootstrap button with FML primary color</p>
+                    <div class="kss-modifiers__example"><button class="btn btn-fml-primary">Button</button></div>
                   </article>
                   <article class="kss-modifiers__modifier">
-                    <h2 class="kss-modifiers__name">.btn-fml-secondary</h2>
-                    <p class="kss-modifiers__description">primary button with secondary color</p>
-                    <div class="kss-modifiers__example"><button class="btn btn-fml-secondary">A button</button></div>
+                    <h2 class="kss-modifiers__name">.fml-secondary</h2>
+                    <p class="kss-modifiers__description">Bootstrap button with FML secondary color</p>
+                    <div class="kss-modifiers__example"><button class="btn btn-fml-secondary">Button</button></div>
+                  </article>
+                  <article class="kss-modifiers__modifier">
+                    <h2 class="kss-modifiers__name">.fml-accent</h2>
+                    <p class="kss-modifiers__description">Bootstrap button with FML accent color</p>
+                    <div class="kss-modifiers__example"><button class="btn btn-fml-accent">Button</button></div>
+                  </article>
+                  <article class="kss-modifiers__modifier">
+                    <h2 class="kss-modifiers__name">.fml-secondary.font-weight-bold</h2>
+                    <p class="kss-modifiers__description">You can also attach other bootstrap utility classes like <code>font-weight-bold</code></p>
+                    <div class="kss-modifiers__example"><button class="btn btn-fml-secondary font-weight-bold">Button</button></div>
                   </article>
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;btn [modifier class]&quot;&gt;A button&lt;/button&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;btn btn-{{modifier_class}}&quot;&gt;Button&lt;/button&gt;</code></pre>
                 </article>
 
             </header>

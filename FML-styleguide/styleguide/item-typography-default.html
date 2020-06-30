@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
     <link rel="stylesheet" href="kss-assets/vendor/prism.css">
     <link rel="stylesheet" href="kss-assets/css/kss.css">
-    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../styles/bootstrap-css/bootstrap.css"/>
 
   </head>
 
@@ -63,23 +63,42 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1>FundMyLaptop Mini-styleguide</h1>
-<h2>Whaaaat, styleguides?</h2>
-<p>Styleguides can be seen as a roadmap for developers and designers to maintain consistency on their code and UI. Some styleguides are built in static HTML, but this is difficult to maintain. A better solution would be a living styleguide, which is auto-generated from the comments in your codebase.</p>
-<h2>What is contained here?</h2>
-<p>This is a mini documentation for some of the bootstrap customizations made to the frontend project files for the FundMyLaptop project.</p>
-<p>The customizations here would enable frontend developers on this project to avoid repeating some basic styling that is consistent across the project(font-family, buttons colors and style, e.t.c).</p>
-<p>It would also help to enforce consistency on our most used UI elements and components and help the frontend team adhere to the styleguides provided by designers.</p>
-<h2>Bootstrap's customized defaults</h2>
-<p>Below are styles you don't have to repeat in your style rules as you contribute to this project.</p>
-<ul>
-<li><strong>font-family</strong> - the <code>body</code> default <code>font-family</code> has been set to the project's main font - <em>DM Sans</em></li>
-<li><strong>h1, h2, h3</strong> - font sizes for these heading have been set to the values provided on the design styleguide</li>
-</ul>
-<p>*<em>All other customizations are contained in their respective sections in the documentation menu</em></p>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-typography-default">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>src/typography/_typography.scss</span>, line <span>9</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-typography-default">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.1</span>
+                  <span class="kss-section__name">Default Font</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>The body font for the entire project is set to <code>DM Sans</code> so there is no need to repeat that rule in your CSS styles</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><p>FundMyLaptop is awesome!</p></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;p&gt;FundMyLaptop is awesome!&lt;/p&gt;</code></pre>
+                </article>
+
+            </header>
     </section>
     <!-- /documentation. -->
 
