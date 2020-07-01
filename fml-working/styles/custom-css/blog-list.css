@@ -16,6 +16,10 @@
 
 /* Article styles */
 
+.article-title a.text-dark:hover {
+  color: var(--fml-secondary) !important;
+}
+
 .article-body p {
   font-size: 18px;
   line-height: 1.8;
