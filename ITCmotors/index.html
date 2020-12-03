@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<title>itcmotors</title>
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Archivo"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Archivo+Black"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto"
+		/>
+		<link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/colors.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css"
+		/>
+		<link rel="stylesheet" href="assets/css/styles.css" />
+	</head>
+
+	<body>
+		<nav
+			class="navbar navbar-light navbar-expand-lg"
+			style="border-bottom: 1px solid rgb(217, 217, 217)"
+		>
+			<div class="container-fluid">
+				<a class="navbar-brand mr-4" href="#"
+					><i class="fa fa-bus mr-1"></i>itcmotors</a
+				>
+				<button
+					data-toggle="collapse"
+					class="navbar-toggler"
+					data-target="#navcol-1"
+				>
+					<span class="sr-only">Toggle navigation</span
+					><span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-between"
+					id="navcol-1"
+				>
+					<ul class="left-top-nav nav navbar-nav mr-auto align-items-center">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Home</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">Info</a></li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"
+								><button class="courier-cta btn" type="button">
+									Courier
+								</button></a
+							>
+						</li>
+					</ul>
+					<ul class="right-top-nav nav navbar-nav align-items-center">
+						<li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+						<li class="nav-item dropdown">
+							<a
+								class="dropdown-toggle nav-link"
+								data-toggle="dropdown"
+								aria-expanded="false"
+								href="#"
+								>Support</a
+							>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">First Item</a
+								><a class="dropdown-item" href="#">Second Item</a
+								><a class="dropdown-item" href="#">Third Item</a>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section id="intro-booking" class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="text-md-right catch-header">
+						Travel Safe. Travel Secure.
+					</h1>
+				</div>
+				<div class="col booking">
+					<div class="container">
+						<div>
+							<ul class="nav nav-tabs" role="tablist">
+								<li class="nav-item" role="presentation">
+									<a
+										class="nav-link active"
+										role="tab"
+										data-toggle="tab"
+										href="#tab-1"
+										>Book Seat</a
+									>
+								</li>
+								<li class="nav-item" role="presentation">
+									<a class="nav-link" role="tab" data-toggle="tab" href="#tab-2"
+										>Hire Bus</a
+									>
+								</li>
+								<li class="nav-item" role="presentation">
+									<a class="nav-link" role="tab" data-toggle="tab" href="#tab-3"
+										>Book Status</a
+									>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" role="tabpanel" id="tab-1">
+									<form class="book-seat">
+										<div class="form-row booking-options">
+											<div class="col-auto">
+												<div class="dropdown">
+													<button
+														class="btn booking-flags dropdown-toggle"
+														data-toggle="dropdown"
+														aria-expanded="false"
+														type="button"
+													>
+														Round Trip
+													</button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">One Way</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-2">
+												<div class="dropdown">
+													<button
+														class="btn booking-flags dropdown-toggle"
+														data-toggle="dropdown"
+														aria-expanded="false"
+														type="button"
+													>
+														1 Passenger
+													</button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">2 Passengers</a
+														><a class="dropdown-item" href="#">3 Passengers</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-row" style="margin-top: 20px">
+											<div class="col-3">
+												<select class="form-control">
+													<optgroup label="This is a group">
+														<option value="12" selected="">
+															Departure Location
+														</option>
+														<option value="13">This is item 2</option>
+														<option value="14">This is item 3</option>
+													</optgroup>
+												</select>
+											</div>
+											<div class="col-3">
+												<select class="form-control">
+													<optgroup label="This is a group">
+														<option value="12" selected="">
+															Arrival Location
+														</option>
+														<option value="13">This is item 2</option>
+														<option value="14">This is item 3</option>
+													</optgroup>
+												</select>
+											</div>
+											<div class="col-3">
+												<input class="form-control" type="datetime-local" />
+											</div>
+											<div class="col">
+												<button class="btn book-btn" type="button">
+													Book Ticket
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="tab-pane" role="tabpanel" id="tab-2">
+									<form id="book-seat-1" class="book-seat">
+										<div class="form-row booking-options">
+											<div class="col-auto">
+												<div class="dropdown">
+													<button
+														class="btn booking-flags dropdown-toggle"
+														data-toggle="dropdown"
+														aria-expanded="false"
+														type="button"
+													>
+														Round Trip
+													</button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">One Way</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-2">
+												<div class="dropdown">
+													<button
+														class="btn booking-flags dropdown-toggle"
+														data-toggle="dropdown"
+														aria-expanded="false"
+														type="button"
+													>
+														1 Passenger
+													</button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">2 Passengers</a
+														><a class="dropdown-item" href="#">3 Passengers</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-row" style="margin-top: 20px">
+											<div class="col-3">
+												<select class="form-control">
+													<optgroup label="This is a group">
+														<option value="12" selected="">
+															Departure Location
+														</option>
+														<option value="13">This is item 2</option>
+														<option value="14">This is item 3</option>
+													</optgroup>
+												</select>
+											</div>
+											<div class="col-3">
+												<select class="form-control">
+													<optgroup label="This is a group">
+														<option value="12" selected="">
+															Arrival Location
+														</option>
+														<option value="13">This is item 2</option>
+														<option value="14">This is item 3</option>
+													</optgroup>
+												</select>
+											</div>
+											<div class="col-3">
+												<input class="form-control" type="datetime-local" />
+											</div>
+											<div class="col">
+												<button class="btn btn-primary book-ticket-btn">
+													Book Ticket
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="tab-pane" role="tabpanel" id="tab-3">
+									<p>Content for tab 3.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+	</body>
+</html>
