@@ -14,7 +14,9 @@
   --unbleached-silk: #ffddc7ff;
 
   /* Fonts */
-  --bold-heading: 'Archivo Black', Arial, Helvetica, sans-serif;
+  --bold-heading: 'Helvetica Nueu', 'Archivo Black', Arial, Helvetica, sans-serif;
+  --section-heading: Helvetica, 'Montserrat', Arial, sans-serif;
+  --paragraph-text: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -205,5 +207,72 @@ body {
 
 .feature-desc {
   font-size: 14px;
+  font-family: var(--paragraph-text);
   padding-left: 10px;
+}
+
+//discover destinations
+.discover-destinations {
+  margin-top: 5em;
+  background: url('../img/discover-routes-itc.jpg');
+  background-repeat: none;
+  padding: 3em 0;
+
+  @include respond-below(sm) {
+    padding: 2em 0;
+  }
+
+  .row {
+    justify-content: space-between;
+  }
+
+  .discover-text {
+    h2 {
+      color: var(--cultured);
+      font-family: var(--section-heading);
+      font-weight: 700;
+      line-height: 1.33;
+      margin-bottom: 1em;
+
+      @include respond-below(sm) {
+        margin-bottom: 0.5em;
+      }
+    }
+
+    h3 {
+      color: var(--cultured);
+      font-size: 18px;
+      margin-bottom: 1em;
+
+      @include respond-below(sm) {
+        font-size: 14px;
+        margin-bottom: 0.5em;
+      }
+    }
+
+    .routes-button {
+      background: var(--caribbean-green);
+      color: var(--gunmetal);
+    }
+  }
+
+  .discover-map {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .map-mask {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid var(--caribbean-green);
+      background: url(../img/map.png);
+      background-size: contain;
+    }
+
+    @include respond-below(sm) {
+      margin-top: 1em;
+      justify-content: center;
+    }
+  }
 }

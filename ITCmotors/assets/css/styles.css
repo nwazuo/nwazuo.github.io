@@ -9,7 +9,9 @@
   --flame: #de541eff;
   --unbleached-silk: #ffddc7ff;
   /* Fonts */
-  --bold-heading: 'Archivo Black', Arial, Helvetica, sans-serif;
+  --bold-heading: 'Helvetica Nueu', 'Archivo Black', Arial, Helvetica, sans-serif;
+  --section-heading: Helvetica, 'Montserrat', Arial, sans-serif;
+  --paragraph-text: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -200,6 +202,88 @@ body {
 
 .feature-desc {
   font-size: 14px;
+  font-family: var(--paragraph-text);
   padding-left: 10px;
+}
+
+.discover-destinations {
+  margin-top: 5em;
+  background: url("../img/discover-routes-itc.jpg");
+  background-repeat: none;
+  padding: 3em 0;
+}
+
+@media (max-width: 767px) {
+  .discover-destinations {
+    padding: 2em 0;
+  }
+}
+
+.discover-destinations .row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.discover-destinations .discover-text h2 {
+  color: var(--cultured);
+  font-family: var(--section-heading);
+  font-weight: 700;
+  line-height: 1.33;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 767px) {
+  .discover-destinations .discover-text h2 {
+    margin-bottom: 0.5em;
+  }
+}
+
+.discover-destinations .discover-text h3 {
+  color: var(--cultured);
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 767px) {
+  .discover-destinations .discover-text h3 {
+    font-size: 14px;
+    margin-bottom: 0.5em;
+  }
+}
+
+.discover-destinations .discover-text .routes-button {
+  background: var(--caribbean-green);
+  color: var(--gunmetal);
+}
+
+.discover-destinations .discover-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.discover-destinations .discover-map .map-mask {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--caribbean-green);
+  background: url(../img/map.png);
+  background-size: contain;
+}
+
+@media (max-width: 767px) {
+  .discover-destinations .discover-map {
+    margin-top: 1em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
