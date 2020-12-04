@@ -9,6 +9,7 @@
   --caribbean-green: #22cfa0ff;
   --aero-blue: #dfffebff;
   --rich-black-fogra-29: #121619ff;
+  --gunmetal: #192833;
   --flame: #de541eff;
   --unbleached-silk: #ffddc7ff;
 
@@ -23,10 +24,20 @@ body {
 
 .navbar-brand {
   font-family: 'Archivo Black', Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+
+  @include respond-above(xs) {
+    font-size: 1rem;
+  }
 }
 
 .navbar-brand .logo {
-  // margin-right: 0.5em;
+  width: 30px;
+
+  @include respond-above(xs) {
+    width: 45px
+  }
+
 }
 
 .btn {
@@ -136,4 +147,63 @@ body {
 
 .form-control {
   height: calc(1.5em + 1.5rem + 2px);
+}
+
+//features
+
+.features {
+  h2 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: var(--gunmetal);
+    margin-bottom: 2.2em;
+    padding-left: 10px;
+    line-height: 1.33em;
+
+    @include respond-below(sm) {
+      margin-bottom: 1.3em;
+    }
+  }
+
+  h3 {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--cerulean-blue);
+    margin-bottom: 1.8em;
+    padding-left: 10px;
+
+    @include respond-below(sm) {
+      margin-bottom: 1em;
+      font-size: 1rem;
+    }
+
+  }
+}
+
+.feature-item {
+  @include respond-below(sm) {
+    margin-top: 0.75rem;
+  }
+}
+
+.feature-icon {
+  width: 40px;
+  display: block;
+  margin-left: 10px;
+}
+
+.feature-content .feature-title {
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 10px;
+  margin-top: 10px;
+  line-height: 1rem;
+  border-left: 1.5px solid var(--gunmetal);
+  color: var(--gunmetal);
+}
+
+.feature-desc {
+  font-size: 14px;
+  padding-left: 10px;
 }
