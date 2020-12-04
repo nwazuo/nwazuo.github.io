@@ -40,7 +40,12 @@
 		>
 			<div class="container-fluid">
 				<a class="navbar-brand mr-4" href="#"
-					><i class="fa fa-bus mr-1"></i>itcmotors</a
+					><img
+						class="logo mr-1"
+						src="assets/img/itc logo.png"
+						alt="logo"
+						width="45px"
+					/>IMO TRANSPORT COMPANY</a
 				>
 				<button
 					data-toggle="collapse"
@@ -95,35 +100,35 @@
 						Travel Safe. Travel Secure.
 					</h1>
 				</div>
-				<div class="col booking">
-					<div class="container">
-						<div>
-							<ul class="nav nav-tabs" role="tablist">
-								<li class="nav-item" role="presentation">
-									<a
-										class="nav-link active"
-										role="tab"
-										data-toggle="tab"
-										href="#tab-1"
-										>Book Seat</a
-									>
-								</li>
-								<li class="nav-item" role="presentation">
-									<a class="nav-link" role="tab" data-toggle="tab" href="#tab-2"
-										>Hire Bus</a
-									>
-								</li>
-								<li class="nav-item" role="presentation">
-									<a class="nav-link" role="tab" data-toggle="tab" href="#tab-3"
-										>Book Status</a
-									>
-								</li>
-							</ul>
-							<div class="tab-content">
-								<div class="tab-pane active" role="tabpanel" id="tab-1">
-									<form class="book-seat">
-										<div class="form-row booking-options">
-											<div class="col-auto">
+				<div class="container booking">
+					<div>
+						<ul class="nav nav-tabs" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a
+									class="nav-link active"
+									role="tab"
+									data-toggle="tab"
+									href="#tab-1"
+									>Book Seat</a
+								>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" role="tab" data-toggle="tab" href="#tab-2"
+									>Hire Bus</a
+								>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" role="tab" data-toggle="tab" href="#tab-3"
+									>Book Status</a
+								>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" role="tabpanel" id="tab-1">
+								<form class="book-seat">
+									<div class="booking-options">
+										<div class="row">
+											<div class="col-auto mb-2 mb-sm-0">
 												<div class="dropdown">
 													<button
 														class="btn booking-flags dropdown-toggle"
@@ -138,7 +143,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-2">
+											<div class="col-auto">
 												<div class="dropdown">
 													<button
 														class="btn booking-flags dropdown-toggle"
@@ -155,44 +160,47 @@
 												</div>
 											</div>
 										</div>
-										<div class="form-row" style="margin-top: 20px">
-											<div class="col-3">
-												<select class="form-control">
-													<optgroup label="This is a group">
-														<option value="12" selected="">
-															Departure Location
-														</option>
-														<option value="13">This is item 2</option>
-														<option value="14">This is item 3</option>
-													</optgroup>
-												</select>
-											</div>
-											<div class="col-3">
-												<select class="form-control">
-													<optgroup label="This is a group">
-														<option value="12" selected="">
-															Arrival Location
-														</option>
-														<option value="13">This is item 2</option>
-														<option value="14">This is item 3</option>
-													</optgroup>
-												</select>
-											</div>
-											<div class="col-3">
-												<input class="form-control" type="datetime-local" />
-											</div>
-											<div class="col">
-												<button class="btn book-btn" type="button">
-													Book Ticket
-												</button>
-											</div>
+									</div>
+									<div class="form-row">
+										<div class="input-wrapper col-md">
+											<select class="form-control">
+												<optgroup label="This is a group">
+													<option value="12" selected="">
+														Departure Location
+													</option>
+													<option value="13">This is item 2</option>
+													<option value="14">This is item 3</option>
+												</optgroup>
+											</select>
 										</div>
-									</form>
-								</div>
-								<div class="tab-pane" role="tabpanel" id="tab-2">
-									<form id="book-seat-1" class="book-seat">
-										<div class="form-row booking-options">
-											<div class="col-auto">
+										<div class="input-wrapper col-md">
+											<select class="form-control">
+												<optgroup label="This is a group">
+													<option value="12" selected="">
+														Arrival Location
+													</option>
+													<option value="13">This is item 2</option>
+													<option value="14">This is item 3</option>
+												</optgroup>
+											</select>
+										</div>
+										<div class="input-wrapper col-md">
+											<input class="form-control" type="datetime-local" />
+										</div>
+										<div class="w-100 d-none d-md-block"></div>
+										<div class="col">
+											<button class="btn book-btn" type="button">
+												Book Ticket
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="tab-pane" role="tabpanel" id="tab-2">
+								<form class="book-seat">
+									<div class="booking-options">
+										<div class="row">
+											<div class="col-auto mb-2 mb-sm-0">
 												<div class="dropdown">
 													<button
 														class="btn booking-flags dropdown-toggle"
@@ -207,60 +215,56 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-2">
-												<div class="dropdown">
-													<button
-														class="btn booking-flags dropdown-toggle"
-														data-toggle="dropdown"
-														aria-expanded="false"
-														type="button"
-													>
-														1 Passenger
-													</button>
-													<div class="dropdown-menu">
-														<a class="dropdown-item" href="#">2 Passengers</a
-														><a class="dropdown-item" href="#">3 Passengers</a>
-													</div>
-												</div>
-											</div>
 										</div>
-										<div class="form-row" style="margin-top: 20px">
-											<div class="col-3">
-												<select class="form-control">
-													<optgroup label="This is a group">
-														<option value="12" selected="">
-															Departure Location
-														</option>
-														<option value="13">This is item 2</option>
-														<option value="14">This is item 3</option>
-													</optgroup>
-												</select>
-											</div>
-											<div class="col-3">
-												<select class="form-control">
-													<optgroup label="This is a group">
-														<option value="12" selected="">
-															Arrival Location
-														</option>
-														<option value="13">This is item 2</option>
-														<option value="14">This is item 3</option>
-													</optgroup>
-												</select>
-											</div>
-											<div class="col-3">
-												<input class="form-control" type="datetime-local" />
-											</div>
-											<div class="col">
-												<button class="btn btn-primary book-ticket-btn">
-													Book Ticket
-												</button>
-											</div>
+									</div>
+									<div class="form-row">
+										<div class="input-wrapper col-md">
+											<select class="form-control">
+												<optgroup label="This is a group">
+													<option value="12" selected="">
+														Departure Location
+													</option>
+													<option value="13">This is item 2</option>
+													<option value="14">This is item 3</option>
+												</optgroup>
+											</select>
 										</div>
-									</form>
-								</div>
-								<div class="tab-pane" role="tabpanel" id="tab-3">
-									<p>Content for tab 3.</p>
-								</div>
+										<div class="input-wrapper col-md">
+											<select class="form-control">
+												<optgroup label="This is a group">
+													<option value="12" selected="">
+														Arrival Location
+													</option>
+													<option value="13">This is item 2</option>
+													<option value="14">This is item 3</option>
+												</optgroup>
+											</select>
+										</div>
+										<div class="input-wrapper col-md">
+											<input class="form-control" type="datetime-local" />
+										</div>
+										<div class="w-100 d-none d-md-block"></div>
+										<div class="col">
+											<button class="btn book-btn" type="button">
+												Reserve Bus
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="tab-pane" role="tabpanel" id="tab-3">
+								<form class="check-ticket">
+									<label for="check-ticket" class=""
+										>Enter booking number</label
+									>
+									<input
+										type="text"
+										name="check-ticket"
+										class="form-control col-md-7"
+									/>
+									<div class="w-100"></div>
+									<button class="btn book-btn" type="button">Check</button>
+								</form>
 							</div>
 						</div>
 					</div>

@@ -25,8 +25,8 @@ body {
   font-family: 'Archivo Black', Arial, Helvetica, sans-serif;
 }
 
-.navbar-brand .fa-bus {
-  color: var(--cerulean-blue);
+.navbar-brand .logo {
+  // margin-right: 0.5em;
 }
 
 .btn {
@@ -87,6 +87,12 @@ body {
     }
   }
 
+  .nav-tabs .nav-link {
+    @include respond-below(xs) {
+      font-size: 0.7rem;
+    }
+  }
+
   .tab-content {
     border: 0;
     margin-top: -2px;
@@ -94,9 +100,12 @@ body {
     .tab-pane {
       background: var(--cultured);
       border: 1px solid #e0e0e0;
-      padding: 3rem;
+      padding: 2rem;
 
       /* media query here */
+      @include respond-below(sm) {
+        padding: 13px;
+      }
 
     }
 
@@ -107,8 +116,22 @@ body {
   }
 }
 
+
+
+.form-row {
+  margin-top: 15px;
+
+  @include respond-below(sm) {
+    .input-wrapper {
+      padding-top: 10px;
+    }
+  }
+}
+
 .book-btn {
   color: white;
+  margin-top: 10px;
+  height: calc(1.5em + 1.5rem + 2px);
 }
 
 .form-control {
