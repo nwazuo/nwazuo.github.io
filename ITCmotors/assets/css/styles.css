@@ -286,4 +286,139 @@ body {
             justify-content: center;
   }
 }
+
+.deals {
+  margin-top: 3em;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.deals h3 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--gunmetal);
+}
+
+@media (max-width: 767px) {
+  .deals h3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.deals .overscroll-container {
+  overflow-x: auto;
+}
+
+.deals::-webkit-scrollbar {
+  display: none;
+}
+
+.deals-container {
+  min-width: 992px;
+}
+
+.deal-link {
+  margin-bottom: 2rem;
+}
+
+.deals-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.deal-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background: var(--caribbean-green);
+}
+
+.deal-thumb img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.deal-content {
+  padding-left: 10px;
+  color: var(--gunmetal);
+}
+
+.deal-content i.fa {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  color: var(--flame);
+}
+
+.deal-content p {
+  margin-bottom: 0;
+}
+
+.foot-section-wrap {
+  padding-top: 3em;
+}
+
+.extras {
+  border-top: 1px solid #c0c1c4;
+  padding-top: 2em;
+}
+
+@media (max-width: 767px) {
+  .extras-item {
+    margin-bottom: 2rem;
+  }
+}
+
+.extras-item b {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.extras-item ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.extras-item ul li {
+  margin-bottom: 0.75rem;
+}
+
+.extras-item ul li a {
+  color: var(--gunmetal);
+}
+
+.footer {
+  margin-top: 2rem;
+  border-top: 1px solid #C0C1C4;
+  padding-top: 1rem;
+}
+
+.footer .row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .footer-links {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .footer .footer-links {
+    text-align: left;
+  }
+}
+
+.footer a {
+  color: var(--gunmetal);
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+.footer a:first-child {
+  padding-left: none;
+}
 /*# sourceMappingURL=styles.css.map */
