@@ -65,12 +65,12 @@ body {
 
 /* hero */
 .hero-background {
-  background: url('../assets/img/bus-interior.jpg');
+  background: url('../img/bus-interior.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
   @include respond-below(sm) {
-    background: url('../assets/img/bus-interior-mobile.jpg');
+    background: url('../img/bus-interior-mobile.jpg');
   }
 }
 
