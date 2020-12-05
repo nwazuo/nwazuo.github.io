@@ -63,6 +63,17 @@ body {
   color: var(--rich-black-fogra-29) !important;
 }
 
+/* hero */
+.hero-background {
+  background: url('/assets/img/bus-interior.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include respond-below(sm) {
+    background: url('/assets/img/bus-interior-mobile.jpg');
+  }
+}
+
 /* Intro booking */
 #intro-booking {
   padding-top: 3rem;
@@ -76,6 +87,17 @@ body {
 
 .catch-header {
   font-family: var(--bold-heading);
+  color: var(--cultured);
+}
+
+.catch-paragraph {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cultured);
+
+  @include respond-below(sm) {
+    font-size: 1rem;
+  }
 }
 
 .booking {
@@ -91,12 +113,13 @@ body {
 
     .nav-link {
       border-bottom: 0;
+      color: var(--cultured) !important;
     }
 
     .nav-link.active {
       background: var(--cultured);
       border-bottom: 0;
-
+      color: var(--gunmetal) !important;
     }
   }
 
@@ -145,6 +168,10 @@ body {
   color: white;
   margin-top: 10px;
   height: calc(1.5em + 1.5rem + 2px);
+
+  @include respond-below(sm) {
+    font-size: 0.8rem;
+  }
 }
 
 .form-control {
@@ -154,6 +181,12 @@ body {
 //features
 
 .features {
+  padding-top: 5em;
+
+  @include respond-below(sm) {
+    padding-top: 3em
+  }
+
   h2 {
     font-family: 'Montserrat';
     font-weight: 700;
@@ -279,8 +312,6 @@ body {
 
 .deals {
   margin-top: 3em;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 
   h3 {
     font-weight: 700;
@@ -294,11 +325,15 @@ body {
 
   .overscroll-container {
     overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+
+    }
   }
 
-  &::-webkit-scrollbar {
-    display: none
-  }
 }
 
 .deals-container {
@@ -400,4 +435,13 @@ body {
       padding-left: none;
     }
   }
+}
+
+//chat widget blocking layout correction
+.chat {
+  display: none;
+}
+
+.is-visible {
+  display: initial !important;
 }

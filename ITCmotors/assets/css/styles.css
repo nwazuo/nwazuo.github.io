@@ -59,6 +59,19 @@ body {
   color: var(--rich-black-fogra-29) !important;
 }
 
+/* hero */
+.hero-background {
+  background: url("/assets/img/bus-interior.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .hero-background {
+    background: url("/assets/img/bus-interior-mobile.jpg");
+  }
+}
+
 /* Intro booking */
 #intro-booking {
   padding-top: 3rem;
@@ -74,6 +87,19 @@ body {
 
 .catch-header {
   font-family: var(--bold-heading);
+  color: var(--cultured);
+}
+
+.catch-paragraph {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cultured);
+}
+
+@media (max-width: 767px) {
+  .catch-paragraph {
+    font-size: 1rem;
+  }
 }
 
 .booking {
@@ -91,11 +117,13 @@ body {
 
 .booking li.nav-item .nav-link {
   border-bottom: 0;
+  color: var(--cultured) !important;
 }
 
 .booking li.nav-item .nav-link.active {
   background: var(--cultured);
   border-bottom: 0;
+  color: var(--gunmetal) !important;
 }
 
 @media (max-width: 575px) {
@@ -143,8 +171,24 @@ body {
   height: calc(1.5em + 1.5rem + 2px);
 }
 
+@media (max-width: 767px) {
+  .book-btn {
+    font-size: 0.8rem;
+  }
+}
+
 .form-control {
   height: calc(1.5em + 1.5rem + 2px);
+}
+
+.features {
+  padding-top: 5em;
+}
+
+@media (max-width: 767px) {
+  .features {
+    padding-top: 3em;
+  }
 }
 
 .features h2 {
@@ -289,8 +333,6 @@ body {
 
 .deals {
   margin-top: 3em;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .deals h3 {
@@ -307,9 +349,11 @@ body {
 
 .deals .overscroll-container {
   overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.deals::-webkit-scrollbar {
+.deals .overscroll-container::-webkit-scrollbar {
   display: none;
 }
 
@@ -420,5 +464,13 @@ body {
 
 .footer a:first-child {
   padding-left: none;
+}
+
+.chat {
+  display: none;
+}
+
+.is-visible {
+  display: initial !important;
 }
 /*# sourceMappingURL=styles.css.map */
